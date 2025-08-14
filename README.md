@@ -1,46 +1,85 @@
-# Astro Starter Kit: Basics
+# A&C Propiedades
 
-```sh
-npm create astro@latest -- --template basics
+Proyecto web desarrollado con [Astro](https://astro.build/) y [Tailwind CSS](https://tailwindcss.com/), usando TypeScript.  
+Este sitio está pensado para mostrar información de servicios inmobiliarios y cuenta con un formulario de contacto.
+
+## 🚀 Estructura del Proyecto
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+│   └── favicon/
+│   └── logo/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Inicio/
+│   │   ├── Navbar.astro
+│   │   └── ...
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   ├── index.astro
+│   │   ├── servicios/
+│   │   │   ├── index.astro
+│   │   │   └── ...
+│   │   └── ...
+│   └── styles/
+│       └── global.css
+├── tailwind.config.js (o .mjs)
+├── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧑‍💻 Tecnologías
 
-## 🧞 Commands
+- **Astro**: Framework principal.
+- **Tailwind CSS**: Utilidades para estilos.
+- **TypeScript**: Tipado estático.
+- **Vite**: Bundler y servidor de desarrollo.
 
-All commands are run from the root of the project, from a terminal:
+## 📦 Instalación
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Clona el repositorio:
+   ```
+   git clone https://github.com/tu-usuario/acPropiedades.git
+   cd acPropiedades
+   ```
+2. Instala dependencias:
+   ```
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```
+   npm run dev
+   ```
 
-## 👀 Want to learn more?
+## 📝 Funcionalidades
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Página principal con información de la empresa.
+- Navegación entre servicios.
+- Formulario de contacto.
+- Diseño responsivo y optimizado.
+
+## 📄 Estructura de componentes
+
+Los componentes están organizados por funcionalidad en la carpeta `src/components`.  
+Las páginas y rutas están en `src/pages`, siguiendo la estructura recomendada por Astro.
+
+## 🛠️ Comandos útiles
+
+| Comando            | Acción                                   |
+|--------------------|------------------------------------------|
+| `npm install`      | Instala dependencias                     |
+| `npm run dev`      | Inicia servidor de desarrollo            |
+| `npm run build`    | Compila el sitio para producción         |
+| `npm run preview`  | Previsualiza el sitio compilado          |
+
+## 📚 Recursos
+
+- [Documentación Astro](https://docs.astro.build)
+- [Documentación Tailwind CSS](https://tailwindcss.com/docs)
+
+---
+
+**Autor:** [Tu Nombre o Usuario]  
+**Licencia:**
