@@ -81,5 +81,5 @@ Las páginas y rutas están en `src/pages`, siguiendo la estructura recomendada 
 
 ---
 
-**Autor:** [Tu Nombre o Usuario]  
-**Licencia:**
+**Autor:** DNO8 
+**Licencia:** MIT
