@@ -1,0 +1,33 @@
+<div>
+    <nav>
+        <ul class="flex flex-col items-center space-y-8">
+            <li>
+                <a href="/servicios" class="text-[#D5BD27] text-4xl relative underline-animation">Servicios</a>
+            </li>
+            <li>
+                <a href="/contacto" class="text-[#D5BD27] text-4xl relative underline-animation">Contacto</a>
+            </li>
+            <li>
+                <a href="/about" class="text-[#D5BD27] text-4xl relative underline-animation">Sobre Nosotros</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<style>
+.underline-animation::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #D5BD27;
+  transition: width 0.3s;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.underline-animation:hover::after {
+  width: 100%;
+}
+</style>

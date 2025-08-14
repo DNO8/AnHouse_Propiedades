@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}",
-  ],
-  theme: {
-    extend: {},
+import typography from '@tailwindcss/typography';
+
+export const content = [
+  "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte,html,md,mdx,vue,svelte}",
+];
+export const theme = {
+  extend: {
+    fontFamily: {
+      aboreto: ['Aboreto', 'sans-serif'],
+    },
   },
-  plugins: [],
-}
+};
+export const plugins = [typography];
