@@ -1,0 +1,91 @@
+---
+    
+    const  currentUrl= new URL(Astro.request.url);
+    const PATHS = new Map([
+    [ '/servicios','Servicios'],
+    ['/contacto','Contacto' ],
+    ['/about','Sobre Nosotros' ]
+    ]);
+    PATHS.has(currentUrl.pathname) ? PATHS.delete(currentUrl.pathname) : '';
+    const PATHSvalues = Array.from(PATHS.values());
+    const url=PATHSvalues;
+    
+---
+<script src="/js/hamburger-script.js" defer></script>
+<header class={`grid ${url.length>=3? 'grid-cols-3' : 'grid-cols-2'} items-center justify-center justify-items-center   bg-[#043959] text-white w-auto pt-5 absolute top 0 left 0 z-10`}>
+    <div class={`w-1/2 h-auto ${url.length>=3?'col-span-1':''}  max-[1024px]:w-full ml-15`}>
+        <a href="/" class="w-full h-auto cursor-grabbing ">
+            <img src="/logo/ac-propiedades-high-resolution-logo-transparent.webp" alt="logo" class="w-auto max-[990px]:w-3/4 max-sm:w-full" />
+        </a>
+    </div>
+    <nav class={`w-1/2 ${url.length>=3?'col-span-2':''} max-sm:hidden justify-self-start max-[1024px]:col-span-1 gap-20`} >
+        <ul class="flex flex-row items-start gap-0 sm:gap-10 lg:gap-20">
+            <li class="m-0">
+                <a href="/" class="text-[#D5BD27] text-2xl relative underline-animation">Inicio</a>
+            </li>
+            {
+                url.map((path) => {
+                    return (
+                        <li class="m-0">
+                            <a href={`/${path=='Sobre Nosotros'? 'about': path.toLowerCase()}`} class="text-[#D5BD27] text-2xl relative underline-animation">{path}</a>
+                        </li>
+                    )
+                })
+            }
+            
+        </ul>
+    </nav>
+    <div class="w-1/2 h-auto flex justify-end display-none sm:flex">
+    <button id="hamburger-button"
+        class="sm:hidden flex flex-col gap-1 z-50 relative group" 
+        aria-label="Toggle mobile menu"
+    >
+        <span class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300 ease-in-out group-[.open]:rotate-45 group-[.open]:translate-y-1.5"></span>
+        <span class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300 ease-in-out group-[.open]:opacity-0"></span>
+        <span class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300 ease-in-out group-[.open]:-rotate-45 group-[.open]:-translate-y-1.5"></span>
+    </button>
+
+    <nav id="mobile-menu"
+        class="fixed inset-0 bg-[#043959] text-[#D5BD27] sm:hidden hidden z-40"
+    >
+        <ul class="flex flex-col gap-6 text-xl p-6 w-screen h-screen place-items-center justify-center">
+            <li class="m-0">
+                <a href="/" class="text-[#D5BD27] text-2xl relative underline-animation">Inicio</a>
+            </li>
+            {
+                url.map((path) => {
+                    return (
+                        <li class="m-0">
+                            <a href={`/${path=='Sobre Nosotros'? 'about': path.toLowerCase()}`} class="text-[#D5BD27] text-2xl relative underline-animation ">{path}</a>
+                        </li>
+                    )
+                })
+            }
+        </ul>
+    </nav>
+</div>
+</header>
+
+
+<style>
+.underline-animation::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #D5BD27;
+  transition: width 0.3s;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.underline-animation:hover::after {
+  width: 100%;
+}
+*{
+        font-family: EBGaramond, sans-serif;
+}
+</style>
+
+

@@ -1,14 +1,14 @@
 <div>
     <nav>
-        <ul class="flex flex-col items-center space-y-8">
+        <ul class="flex flex-col items-center space-y-22">
             <li>
-                <a href="/servicios" class="text-[#D5BD27] text-4xl relative underline-animation">Servicios</a>
+                <a href="/servicios" class="text-[#D5BD27] text-4xl relative underline-animation" transition:name="t-servicios" transition:animate="fade">Servicios</a>
             </li>
             <li>
-                <a href="/contacto" class="text-[#D5BD27] text-4xl relative underline-animation">Contacto</a>
+                <a href="/contacto" class="text-[#D5BD27] text-4xl relative underline-animation" transition:name="t-contacto" transition:animate="fade">Contacto</a>
             </li>
             <li>
-                <a href="/about" class="text-[#D5BD27] text-4xl relative underline-animation">Sobre Nosotros</a>
+                <a href="/about" class="text-[#D5BD27] text-4xl relative underline-animation" transition:name="t-nosotros" transition:animate="fade">Sobre Nosotros</a>
             </li>
         </ul>
     </nav>
@@ -29,5 +29,8 @@
 }
 .underline-animation:hover::after {
   width: 100%;
+}
+*{
+        font-family: EBGaramond, sans-serif;
 }
 </style>

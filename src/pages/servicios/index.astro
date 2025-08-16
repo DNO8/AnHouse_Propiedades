@@ -1,16 +1,38 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import LayoutPages from "../../layouts/Layout-Pages.astro"
+import NavGeneral from "../../components/NavGeneral.astro"
+import CardServices from "../../components/Servicios/card-services.astro"
+import { getCollection } from "astro:content"
 
+const servicios = await getCollection("services");
 
 ---
 
-<Layout>
-    <main class="container">
-        <h1>Servicios</h1>
-        <p>En esta sección encontrarás información sobre nuestros servicios de venta y renta de propiedades.</p>
-        <ul>
-            <li><a href="/servicios/corretajes">Corretaje de Propiedades</a></li>
-            <li><a href="/servicios/asesorias">Asesorias de venta</a></li>
-        </ul>
+<LayoutPages>
+    <NavGeneral/>
+    <main class="w-screen min-h-screen bg-no-repeat bg-cover flex flex-col items-center justify-center text-white pt-40">
+        <div class="text-center mb-12 w-1/2 max-lg:w-3/4">
+            <h1 transition:name="t-servicios" transition:animate="fade">Servicios</h1>
+            <p>En esta sección encontrarás información sobre nuestros servicios de venta y renta de propiedades. Da click para saber mas de nuestros</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 justify-items-center max-lg:gap-0 max-xl:gap-2 ">
+             {servicios.map(servicio=>{
+            return (
+                <CardServices title={servicio.data.titulo} description={servicio.data.descripcion} reference={servicio.data.referencia} mask={servicio.data.mask}/>
+            )
+        })}
+        </div>
+       
     </main>
-</Layout>
+</LayoutPages>
+<style>
+    main>* {
+        font-family: 'FiraMono';
+    }
+    h1{
+        font-family: EBGaramond;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+</style>

@@ -1,10 +1,14 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+
+import NavGeneral from "../../components/NavGeneral.astro"
+import LayoutPages from "../../layouts/Layout-Pages.astro"
 ---
 
-<Layout>
-    <main>
+<LayoutPages>
+    <NavGeneral/>
+    <main class="w-full h-screen flex flex-col items-center justify-center text-white">
+        <h1 transition:name="t-Asesorias" transition:animate="fade" class="text-8xl text-amber-200">Asesorias</h1>
         seccion de asesoria
         <h1>A&C Propiedades</h1>
     </main>
-</Layout>
+</LayoutPages>
