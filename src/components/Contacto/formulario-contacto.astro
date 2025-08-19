@@ -1,21 +1,21 @@
-<div class="w-full h-screen p-32 bg-transparent mask-l-from-96% to-100% rounded-lg shadow-md cols-span-1 flex flex-col gap-4 justify-start items-center max-sm:py-4 max-md:p-10 text-[#f9f6ee]">
+<div class="w-full h-screen py-30 bg-transparent mask-l-from-96% to-100% rounded-lg shadow-md cols-span-1 flex flex-col gap-4 justify-start items-center max-sm:py-4 max-md:py-22 text-[#f9f6ee] max-2xl:py-25">
             
             <form action="https://formsubmit.co/tu-correo@example.com" method="POST" class="flex flex-col gap-4  max-w-md">
             <!-- Nombre del cliente -->
-             <label for="nombre" class="font-extralight text-2xl lg:text-3xl">nombre*</label>
-            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="Nombre y apellido" class="w-full h-10 text-3xl bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none  placeholder:text-3xl max-lg:text-2xl max-lg:placeholder:text-2xl">
+             <label for="nombre" class="font-extralight text-2xs lg:text-2xl">nombre*</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="Nombre y apellido" class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none  placeholder:text-2xs lg:text-3xl lg:placeholder:text-3xl">
 
             <!-- Correo -->
-             <label for="email" class="font-extralight text-2xl lg:text-3xl">correo*</label>
-            <input id="email" type="email" name="email" placeholder="Tu correo" required autocomplete="correo electronico" class="w-full h-10 text-2xl bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xl lg:text-3xl lg:placeholder:text-3xl">
+             <label for="email" class="font-extralight text-2xs lg:text-2xl">correo*</label>
+            <input id="email" type="email" name="email" placeholder="Tu correo" required autocomplete="correo electronico" class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:text-3xl lg:placeholder:text-3xl">
 
             <!-- Teléfono -->
-            <label for="telefono" class="font-extralight text-2xl lg:text-3xl">teléfono*</label>
-            <input id="telefono" type="tel" name="telefono" placeholder="Tu teléfono" required pattern="[0-9]{8,15}" title="Ingrese solo números, mínimo 8 dígitos" class="w-full h-10 text-2xl bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xl lg:placeholder:text-3xl lg:text-3xl " >
+            <label for="telefono" class="font-extralight text-2xs lg:text-2xl">teléfono*</label>
+            <input id="telefono" type="tel" name="telefono" placeholder="Tu teléfono" required pattern="[0-9]{8,15}" title="Ingrese solo números, mínimo 8 dígitos" class="w-full h-10 text-s bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-3xl lg:text-3xl " >
 
             <!-- Tipo de propiedad -->
-             <label for="tipo_propiedad" class="font-extralight text-3xl max-lg:placeholder:text-2xl">Tipo de Propiedad*</label>
-            <select id="tipo_propiedad" name="tipo_propiedad" class="bg-gray-500 text-white" required class="w-full h-10 text-2xl bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xl lg:placeholder:text-3xl lg:text-3xl">
+             <label for="tipo_propiedad" class="font-extralight text-2xs lg:text-2xl">Tipo de Propiedad*</label>
+            <select id="tipo_propiedad" name="tipo_propiedad" required class="w-full h-8 text-2xs bg-transparent border-b-2 border-gray-500 text-gray-400  focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-2xl lg:text-2xl before:focus:text-white">
                 <option value="">Seleccione tipo de propiedad</option>
                 <option value="departamento">Departamento</option>
                 <option value="casa">Casa</option>
@@ -23,13 +23,13 @@
                 <option value="oficina">Oficina</option>
             </select>
             <!-- Ciudad o comuna de interés -->
-            <label for="ubicacion" class="font-extralight text-2xl lg:placeholder:text-3xl lg:text-3xl">Ciudad o comuna de interés*</label>
-            <input id="ubicacion" type="text" name="ubicacion" placeholder="Ciudad o comuna" required class="w-full h-10 text-2xl bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xl lg:placeholder:text-3xl lg:text-3xl">
+            <label for="ubicacion" class="font-extralight text-2xs lg:text-2xl">Ciudad o comuna de interés*</label>
+            <input id="ubicacion" type="text" name="ubicacion" placeholder="Ciudad o comuna" required class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-3xl lg:text-3xl">
 
             <!-- Mensaje adicional -->
-            <label for="mensaje" class="font-extralight text-2xl lg:placeholder:text-3xl lg:text-3xl">Mensaje*</label>
-            <textarea id="mensaje" name="mensaje" maxlength="600" placeholder="Cuéntanos tus necesidades" required class=" max-w-[200px] max-h-[100px] text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-[1rem] md:max-w-[200px] md:max-h-[150px] lg:placeholder:text-3xl lg:max-w-[350px] lg:max-h-[250px]" ></textarea>
-            <p class="text-sm text-gray-400">Máximo 500 caracteres.</p>
+            <label for="mensaje" class="font-extralight text-2xs lg:text-2xl">Mensaje*</label>
+            <textarea id="mensaje" name="mensaje" maxlength="500" placeholder="Cuéntanos tus necesidades" required class=" max-w-[200px] max-h-[150px] text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xs md:max-h-[100px] md:max-w-[250px] lg:placeholder:text-3xl lg:max-w-[350px]" ></textarea>
+            <p class="text-sm text-[#ffd20a]">Máximo 500 caracteres.</p>
             <!-- Redirección a página de gracias -->
 
             <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">

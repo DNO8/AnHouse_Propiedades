@@ -8,5 +8,12 @@ const services = defineCollection({
         mask:z.string(),
     })
 });
+const FAQ = defineCollection({
+    type: 'content',
+    schema: z.object({
+        titulo: z.string(),
+        descripcion: z.string(),
+    })
+})
 
-export const collections = {services};
+export const collections = {services,FAQ};
