@@ -1,0 +1,8 @@
+---
+const {descripcion}= Astro.props;
+---
+
+<div class="col-span-1">
+    <h1 transition:name="t-nosotros" transition:animate="fade" class="text-7xl md:text-8xl text-amber-200">Sobre Nosotros</h1>
+    <p class="text-center text-lg mt-4 prose prose-invert">{descripcion}</p>
+</div>

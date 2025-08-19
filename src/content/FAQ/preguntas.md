@@ -13,7 +13,7 @@ Sí, contamos con tasadores certificados que cumplen los requisitos para bancos 
 
 ## ¿Cuál es el valor de una asesoría legal inmobiliaria?
 
-Las asesorías parten desde $50.000 dependiendo de la complejidad del caso.
+Las asesorías parten desde $50.000 dependiendo de la complejidad del caso, no dudes en hablar con nosotros
 
 ## ¿Puedo contratar solo uno de los servicios?
 
