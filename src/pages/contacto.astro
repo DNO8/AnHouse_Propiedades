@@ -1,13 +1,17 @@
 ---
-import LayoutPages from "../layouts/Layout-Pages.astro"
-import NavGeneral from "../components/NavGeneral.astro"
+import LayoutPages from "../layouts/Layout-Pages.astro";
+import NavGeneral from "../components/NavGeneral.astro";
+import MidLayer from "../components/Contacto/mid-layer.astro";
+import FormContacto from "../components/Contacto/formulario-contacto.astro"
 ---
 
 <LayoutPages>
     <NavGeneral/>
-    <main class=" w-full h-screen flex flex-col items-center justify-center text-white">
-        <h1 transition:name="t-contacto" transition:animate="fade" class="text-8xl text-amber-200">Contactoooo</h1>
-        Contacto
-        <h1>A&C Propiedades</h1>
+    <main class=" w-full h-screen grid grid-cols-2 max-sm:grid-cols-1 overflow-scroll">
+        <!-- div de imagen que cubre media pantalla -->
+        <MidLayer/>
+        <!-- DIV DEL FORMULARIO DE CONTACTO -->
+        <FormContacto/>
     </main>
 </LayoutPages>
+

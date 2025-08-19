@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @plugin "@tailwindcss/typography";
 @font-face {
     font-family: 'EBGaramond';
@@ -15,3 +14,4 @@
     font-style: normal;
     font-display: swap;
 }
+

@@ -7,6 +7,11 @@ import { ClientRouter } from 'astro:transitions';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A&C Propiedades - Tu aliado en el mercado inmobiliario, ofreciendo servicios de compra, venta y tasación de propiedades.
+    Con años de experiencia, garantizamos un servicio profesional y personalizado para ayudarte a encontrar tu hogar ideal o maximizar el valor de tu propiedad.
+    Descubre nuestras propiedades destacadas y contáctanos para una consulta gratuita.">
+    <meta name="keywords" content="A&C Propiedades, inmobiliaria, compra, venta, tasación, propiedades, hogar, servicio profesional,Tasaciones, inmobiliaria confiable, propiedades destacadas, consulta gratuita">
+    <meta name="author" content="A&C Propiedades">
     <link rel="icon" type="image/svg+xml" href="/favicon/ac-propiedades-ico.ico" />
     <title>A&C Propiedades</title>
     <ClientRouter />
@@ -14,4 +19,11 @@ import { ClientRouter } from 'astro:transitions';
 <body class=" bg-gradient-to-b from-[#043959] from-20% via-[#2858A0] via-80% to-[#D6810D] to-95%">
     <slot/>
 </body>
+   <footer>
+    <div class="text-[12px] fixed bottom-0 left-0 w-full bg-transparent bg-opacity-70 text-center text-white py-4 z-50">
+        <p>&copy; 2025 An House Propiedades. Todos los derechos reservados.</p>
+        <a>Desarrollado con ♥ por <a href="https://github.com/DNO8">DNO99</a>
+    </div>
+    </footer>
+
 </html>

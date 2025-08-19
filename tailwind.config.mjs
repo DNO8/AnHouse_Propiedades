@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 import typography from '@tailwindcss/typography';
-export const content = [
+export default{
+  content : [
   "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte,html,md,mdx,vue,svelte}",
-];
-export const theme = {
+],
+  theme : {
   extend: {
     fontFamily: {
       EBGaramond: ['EBGaramond', 'sans-serif'],
       FiraMono: ['FiraMono', 'monospace'],
     },
   },
-};
-export const plugins = [typography];
+},
+  plugins : [typography]
+} 
+
