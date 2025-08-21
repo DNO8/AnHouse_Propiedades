@@ -8,14 +8,14 @@ let {title,description,reference,mask} = Astro.props;
       <img 
         src={mask}
         alt="mask-image"
-        class="absolute inset-0 w-full h-full object-cover scale-110 opacity-0 transition-all duration-1000 ease-in-out group-hover:opacity-30 group-hover:scale-100 z-0"
+        class="absolute inset-0 w-full h-full object-cover scale-110 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-30 group-hover:scale-100 z-0"
       />
       <div class="absolute inset-0 z-0"></div>
       <div class="relative z-10 text-center mb-4 text-5xl font-extralight text-white">
-        <h1 transition:name={`t-${title}`} transition:animate="fade" class="group-hover:text-amber-200">{title}</h1>
+        <h1 transition:name={`t-${title}`} transition:animate="fade" class="group-hover:text-amber-400">{title}</h1>
       </div>
       <div class="relative z-10 text-[#FCF5E5] text-center mb-4">
-        <h2 class="text-[#2169d4] text-2xl mb-4 group-hover:text-amber-400 transition-all duration-200" >
+        <h2 class="text-amber-200 text-2xl mb-4 group-hover:text-amber-400 transition-all duration-200" >
           {title=='Asesorias'? 'Online o Presencial': 'Presencial'}
         </h2>
         <p class="px-5 mb-20 prose text-[#FCF5E5]">{description}</p>

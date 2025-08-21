@@ -16,7 +16,7 @@ const servicios = await getCollection("services");
             <p>En esta sección encontrarás información sobre nuestros servicios de venta y renta de propiedades. Da click para saber mas de nuestros</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 justify-items-center max-lg:gap-0 max-xl:gap-2 ">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 p-4 justify-items-center max-lg:gap-0 max-xl:gap-2 ">
              {servicios.map(servicio=>{
             return (
                 <CardServices title={servicio.data.titulo} description={servicio.data.descripcion} reference={servicio.data.referencia} mask={servicio.data.mask}/>

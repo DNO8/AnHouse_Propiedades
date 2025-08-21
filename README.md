@@ -1,4 +1,4 @@
-# A&C Propiedades
+# An House Propiedades
 
 Proyecto web desarrollado con [Astro](https://astro.build/) y [Tailwind CSS](https://tailwindcss.com/), usando TypeScript.  
 Este sitio está pensado para mostrar información de servicios inmobiliarios y cuenta con un formulario de contacto.

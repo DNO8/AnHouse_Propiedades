@@ -1,0 +1,130 @@
+---
+
+---
+
+<form class="w-full p-6 bg-transparent shadow-md rounded-md space-y-6 mask-l-from-96% to-100% md:p-12 lg:p-26 xl:p-6 xl:text-2xs">
+  <h2 class="text-2xl font-semibold text-[#FCF5E5] flex flex-col justify-center items-center">Descubre cuánto vale tu propiedad</h2>
+
+  <!-- Tipo de vivienda -->
+  <div>
+    <label for="tipo-vivienda" class="block mb-1 font-medium text-[#FCF5E5]">Tipo de vivienda<span class="text-red-500">*</span></label>
+    <select  required id="tipo-vivienda" name="tipo-vivienda" class="w-full h-8 text-2xs bg-transparent border-b-2 border-gray-500 text-gray-400  focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-2xl lg:text-2xl before:focus:text-white">
+      <option value="">Elige una opción</option>
+      <option value="casa">Casa</option>
+      <option value="departamento">Departamento</option>
+      <option value="parcela">Parcela</option>
+    </select>
+  </div>
+
+  <!-- Región -->
+  <div>
+    <label for="region" class="block mb-1 font-medium text-[#FCF5E5] ">Región<span class="text-red-500">*</span></label>
+    <select required id="region" name="region" class="w-full h-8 text-2xs bg-transparent border-b-2 border-gray-500 text-gray-400  focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-2xl lg:text-2xl before:focus:text-white">
+      <option value="">Elige una opción</option>
+      <option value="metropolitana">Región Metropolitana</option>
+    </select>
+  </div>
+
+  <!-- Comuna -->
+  <div>
+    <label for="comuna" class="block mb-1 font-medium text-[#FCF5E5] ">Comuna<span class="text-red-500">*</span></label>
+    <select required id="comuna" name="comuna" class="w-full h-8 text-2xs bg-transparent border-b-2 border-gray-500 text-gray-400  focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-2xl lg:text-2xl before:focus:text-white">
+        <option value="">Elige una opción</option>
+        <option value="alhue">Alhué</option>
+        <option value="buin">Buin</option>
+        <option value="calera-de-tango">Calera de Tango</option>
+        <option value="cerrillos">Cerrillos</option>
+        <option value="cerro-navia">Cerro Navia</option>
+        <option value="colina">Colina</option>
+        <option value="conchali">Conchalí</option>
+        <option value="el-bosque">El Bosque</option>
+        <option value="el-monte">El Monte</option>
+        <option value="estacion-central">Estación Central</option>
+        <option value="huechuraba">Huechuraba</option>
+        <option value="independencia">Independencia</option>
+        <option value="isla-de-maipo">Isla de Maipo</option>
+        <option value="la-cisterna">La Cisterna</option>
+        <option value="la-florida">La Florida</option>
+        <option value="la-granja">La Granja</option>
+        <option value="la-pintana">La Pintana</option>
+        <option value="la-reina">La Reina</option>
+        <option value="lampa">Lampa</option>
+        <option value="las-condes">Las Condes</option>
+        <option value="lo-barnechea">Lo Barnechea</option>
+        <option value="lo-espejo">Lo Espejo</option>
+        <option value="lo-prado">Lo Prado</option>
+        <option value="macul">Macul</option>
+        <option value="maipu">Maipú</option>
+        <option value="maria-pinto">María Pinto</option>
+        <option value="melipilla">Melipilla</option>
+        <option value="nunoa">Ñuñoa</option>
+        <option value="padre-hurtado">Padre Hurtado</option>
+        <option value="paine">Paine</option>
+        <option value="pedro-aguirre-cerda">Pedro Aguirre Cerda</option>
+        <option value="penalolen">Peñalolén</option>
+        <option value="pirque">Pirque</option>
+        <option value="providencia">Providencia</option>
+        <option value="puente-alto">Puente Alto</option>
+        <option value="quilicura">Quilicura</option>
+        <option value="quinta-normal">Quinta Normal</option>
+        <option value="recoleta">Recoleta</option>
+        <option value="renca">Renca</option>
+        <option value="san-bernardo">San Bernardo</option>
+        <option value="san-jose-de-maipo">San José de Maipo</option>
+        <option value="san-miguel">San Miguel</option>
+        <option value="san-ramon">San Ramón</option>
+        <option value="santiago">Santiago</option>
+        <option value="talagante">Talagante</option>
+        <option value="tiltil">Tiltil</option>
+        <option value="vitacura">Vitacura</option>
+    </select>
+  </div>
+
+  <!-- Dirección -->
+  <div>
+    <label for="direccion" class="block mb-1 font-medium text-[#FCF5E5] ">Dirección <span class="text-red-500">*</span></label>
+    <input
+      type="text"
+      id="direccion"
+      name="direccion"
+      placeholder="Ingresa una ubicación"
+      required
+      class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-3xl lg:text-3xl"
+    />
+  </div>
+
+  <!-- Complemento -->
+  <div>
+    <label for="complemento" class="block mb-1 font-medium text-[#FCF5E5] ">Complemento <span class="text-red-500">*</span></label>
+    <input
+      type="text"
+      id="complemento"
+      name="complemento"
+      placeholder="N° de Casa / Departamento / Parcela"
+      required
+      class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-3xl lg:text-3xl"
+    />
+  </div>
+
+  <!-- Rol -->
+  <div>
+    <label for="rol" class="block mb-1 font-medium text-[#FCF5E5] ">Rol<span class="text-red-500">*</span></label>
+    <input
+      type="text"
+      id="rol"
+      name="rol"
+      required
+      class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-400 focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-3xl lg:text-3xl"
+    />
+  </div>
+
+  <!-- Botón de enviar -->
+  <div class="text-right flex flex-col justify-center items-center md:justify-end md:items-end">
+    <button
+      type="submit"
+      class="w-1/2 bg-amber-500 rounded-2xl hover:bg-amber-700 hover:shadow-lg hover:translate-y-1.5 transition-all duration-300 ease-in-out text-[20px] py-0.5"
+    >
+      Solicitar Tasación
+    </button>
+  </div>
+</form>
