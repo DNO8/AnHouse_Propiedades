@@ -6,14 +6,14 @@ import FormularioTasas from "../../components/tasaciones/formulario-tasas.astro"
 
 <LayoutPages>
     <NavGeneral/>
-    <main class="w-full h-screen overflow-scroll grid grid-cols-1 items-start justify-center pt-22 text-white md:pt-26 xl:overflow-hidden lg:pt-23 lg:gap-4 xl:grid-cols-3 xl:pt-36  ">
-        <div class="col-span-1 w-full h-full flex flex-col items-center justify-center lg:justify-start">
-            <h1 transition:name="t-Tasaciones" transition:animate="fade" class="text-5xl text-amber-200 md:text-6xl lg:text-7xl xl:text-center">Tasaciones</h1>
-            <h2 class="text-lg text-center text-amber-100 p-2">consulta sobre nuestros servicios de tasaciones</h2>
+    <main class="w-full h-screen overflow-scroll grid grid-cols-1 items-start justify-center pt-22 text-white md:pt-26 xl:overflow-hidden lg:pt-23 lg:gap-4 xl:grid-cols-3 xl:pt-25  ">
+        <div class="col-span-1 w-full h-full flex flex-col items-center justify-center lg:justify-start xl:flex xl:flex-col xl:justify-center 2xl:items-center">
+            <h1 transition:name="t-Tasaciones" transition:animate="fade" class="font-[800] text-5xl mb-0 text-amber-200 md:text-6xl lg:text-7xl xl:text-center">Tasaciones</h1>
+            <h2 class="text-lg mb-0 mt-0 text-center text-amber-100 p-2">consulta sobre nuestros servicios de tasaciones</h2>
             <FormularioTasas/>
         </div>
-        <div class="col-span-2 h-full ">
-            <h1 class="flex flex-col text-xl p-4 text-amber-300 justify-center items-center sm:text-4xl md:mb-5 md:justify-between lg:text-5xl pregunta">¿Como afecta una mala Tasación?</h1>
+        <div class="col-span-2 h-full  ">
+            <h1 class="font-[600] flex flex-col text-xl p-4 text-amber-300 justify-center items-center sm:text-4xl md:mb-5 md:justify-between lg:text-5xl pregunta">¿Como afecta una mala Tasación?</h1>
             <article class="h-3/4  p-6 grid grid-cols-1 gap-4 md:grid-cols-2 ">
                 <!-- div de las desventajas -->
                 <div class="grid w-full h-full bg-gradient-to-r from-red-300 from-[-50%] to-transparent to-20% backdrop-blur-3xl p-4 rounded-3xl gap-4  mask-b-from-95% xl:grid-rows-6 ">

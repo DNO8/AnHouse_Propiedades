@@ -2,13 +2,84 @@
 
 import NavGeneral from "../../components/NavGeneral.astro"
 import LayoutPages from "../../layouts/Layout-Pages.astro"
+import ImageComparer from "../../components/asesorias/image-comparer.astro"
 ---
 
 <LayoutPages>
     <NavGeneral/>
-    <main class="w-full h-screen flex flex-col items-center justify-center text-white">
-        <h1 transition:name="t-Asesorias" transition:animate="fade" class="text-8xl text-amber-200">Asesorias</h1>
-        seccion de asesoria
-        <h1>A&C Propiedades</h1>
+    <main class="w-full h-screen overflow-scroll grid grid-cols-1 place-items-center pt-22 text-white md:pt-26 xl:overflow-hidden lg:pt-23 lg:gap-4 xl:grid-cols-2 xl:pt-0 ">
+        <div class="w-full h-auto m-5 p-2 order-2 lg:order-1 sm:w-3/4 sm:p-3 lg:p-6 relative">
+            <div class="flex flex-row justify-between">
+                <p class="absolute top-0 left-10 mb-5 text-lime-200 text-xs lg:text-2xl">con AN House Propiedades</p>
+                <div class="absolute top-3 left-0 lg:p-3 mb-5 z-10 rotate-45">
+                    <svg height="30px" width="30px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" transform="matrix(6.123233995736766e-17,1,1,-6.123233995736766e-17,0,0)">
+                    <style type="text/css">
+                        .st0{fill:#d9ee22;}
+                    </style>
+                    <g>
+                        <path class="st0" d="M508.112,236.074c-3.206-2.717-7.682-3.364-11.52-1.668l-28.206,12.446
+                            c-14.667-46.552-43.096-86.975-80.565-116.432c-40.739-32.058-92.228-51.202-148.08-51.195C107.327,79.234,0.007,186.554,0,318.96
+                            c0,3.061,1.272,5.979,20.514,8.049c2.242,2.084,5.246,3.133,8.293,2.903l111.229-8.408c5.914-0.445,10.405-5.504,10.147-11.426
+                            c-0.043-0.906-0.065-1.826-0.065-2.76c-0.014-10.362,2.479-22.788,6.719-35.486c6.331-19.065,16.514-38.777,26.682-54.155
+                            c5.074-7.69,10.147-14.316,14.574-19.173c2.199-2.429,4.24-4.412,5.943-5.836c0.668-0.574,1.272-1.02,1.811-1.408
+                            c39.086,0.647,74.608,14.186,101.764,36.082c25.62,20.675,43.692,48.658,50.526,80.192l-46.336,20.251
+                            c-3.852,1.682-6.404,5.425-6.576,9.623c-0.166,4.204,2.084,8.128,5.792,10.125l156.697,83.936c2.968,1.595,6.525,1.739,9.607,0.374
+                            c3.09-1.351,5.383-4.068,6.216-7.337l45.123-177.342C512.696,243.088,511.316,238.79,508.112,236.074z M448.717,405.489
+                            l-124.394-66.638l33.61-14.689c4.556-1.991,7.207-6.784,6.46-11.7c-6.173-40.753-28.271-76.634-59.998-102.217
+                            c-31.734-25.584-73.192-41.005-118.422-41.005c-0.108,0-0.208,0.015-0.309,0.015c-0.044,0-0.086,0-0.13,0
+                            c-24.569,0.05-48.025,4.642-69.405,12.949c-5.656,2.2-8.451,8.559-6.252,14.215c2.191,5.648,8.551,8.451,14.214,6.259
+                            c10.305-4.017,21.2-7.007,32.511-8.947c-1.861,2.444-3.737,4.995-5.62,7.704c-9.78,14.179-19.575,31.749-27.063,50.182
+                            c-6.511,16.097-11.333,32.777-12.49,48.744l-89.138,6.733c2.983-55.435,26.64-105.293,63.455-142.123
+                            c39.438-39.431,93.816-63.784,153.994-63.784c50.806,0,97.453,17.362,134.505,46.488c37.045,29.14,64.403,70.03,76.447,117.013
+                            c0.798,3.119,2.946,5.734,5.843,7.143c2.896,1.409,6.288,1.466,9.227,0.173l19.058-8.408L448.717,405.489z"></path>
+                    </g>
+                    </svg>
+                </div>
+                
+                <ImageComparer/>
+                <p class="absolute bottom-0 right-10 p-3 text-lime-200 text-xs lg:text-2xl">sin Asesoria</p>
+                <div class="absolute bottom-0 sm:bottom-3 right-0 p-3 z-10 rotate-180">
+                    <svg height="30px" width="30px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" transform="matrix(6.123233995736766e-17,1,1,-6.123233995736766e-17,0,0)">
+                    <style type="text/css">
+                        .st0{fill:#d9ee22;}
+                    </style>
+                    <g>
+                        <path class="st0" d="M508.112,236.074c-3.206-2.717-7.682-3.364-11.52-1.668l-28.206,12.446
+                            c-14.667-46.552-43.096-86.975-80.565-116.432c-40.739-32.058-92.228-51.202-148.08-51.195C107.327,79.234,0.007,186.554,0,318.96
+                            c0,3.061,1.272,5.979,20.514,8.049c2.242,2.084,5.246,3.133,8.293,2.903l111.229-8.408c5.914-0.445,10.405-5.504,10.147-11.426
+                            c-0.043-0.906-0.065-1.826-0.065-2.76c-0.014-10.362,2.479-22.788,6.719-35.486c6.331-19.065,16.514-38.777,26.682-54.155
+                            c5.074-7.69,10.147-14.316,14.574-19.173c2.199-2.429,4.24-4.412,5.943-5.836c0.668-0.574,1.272-1.02,1.811-1.408
+                            c39.086,0.647,74.608,14.186,101.764,36.082c25.62,20.675,43.692,48.658,50.526,80.192l-46.336,20.251
+                            c-3.852,1.682-6.404,5.425-6.576,9.623c-0.166,4.204,2.084,8.128,5.792,10.125l156.697,83.936c2.968,1.595,6.525,1.739,9.607,0.374
+                            c3.09-1.351,5.383-4.068,6.216-7.337l45.123-177.342C512.696,243.088,511.316,238.79,508.112,236.074z M448.717,405.489
+                            l-124.394-66.638l33.61-14.689c4.556-1.991,7.207-6.784,6.46-11.7c-6.173-40.753-28.271-76.634-59.998-102.217
+                            c-31.734-25.584-73.192-41.005-118.422-41.005c-0.108,0-0.208,0.015-0.309,0.015c-0.044,0-0.086,0-0.13,0
+                            c-24.569,0.05-48.025,4.642-69.405,12.949c-5.656,2.2-8.451,8.559-6.252,14.215c2.191,5.648,8.551,8.451,14.214,6.259
+                            c10.305-4.017,21.2-7.007,32.511-8.947c-1.861,2.444-3.737,4.995-5.62,7.704c-9.78,14.179-19.575,31.749-27.063,50.182
+                            c-6.511,16.097-11.333,32.777-12.49,48.744l-89.138,6.733c2.983-55.435,26.64-105.293,63.455-142.123
+                            c39.438-39.431,93.816-63.784,153.994-63.784c50.806,0,97.453,17.362,134.505,46.488c37.045,29.14,64.403,70.03,76.447,117.013
+                            c0.798,3.119,2.946,5.734,5.843,7.143c2.896,1.409,6.288,1.466,9.227,0.173l19.058-8.408L448.717,405.489z"></path>
+                    </g>
+                    </svg>
+                </div>
+                
+            </div>
+        
+        </div>
+        <div class="order-1 lg:order-2">
+        <h1 transition:name="t-Asesorias" transition:animate="fade" class="text-6xl text-center  xl:text-8xl mb-6 text-amber-200 font-[800]">Asesorias</h1>
+            <div class="prose prose-neutral text-[#FCF5E5] text-[12px] md:text-2xs p-5">
+                <p>En AnHouse Propiedades nos especializamos en brindar asesorías personalizadas y profesionales tanto a personas como a empresas que buscan gestionar procesos de compra, venta o arriendo de bienes raíces.</p>
+                <p>Somos una empresa joven y en crecimiento, comprometida con ofrecer un servicio cercano, transparente y eficiente, adaptado a las necesidades reales de nuestros clientes.</p>
+                <p>Nuestro enfoque es integral: acompañamos a nuestros clientes en cada etapa del proceso inmobiliario, desde la tasación precisa del inmueble hasta el diseño de estrategias de marketing efectivas para su promoción. Nos preocupamos de resaltar el valor real de cada propiedad, posicionándola correctamente en el mercado para asegurar una transacción rápida y favorable.</p>
+        </div>
+        <br/>
+        </div>
+        
     </main>
 </LayoutPages>
+<style>
+    p{
+        font-family: FiraMono;
+    }
+</style>

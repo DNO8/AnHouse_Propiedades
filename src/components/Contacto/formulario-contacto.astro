@@ -3,7 +3,7 @@
             <form action="https://formsubmit.co/tu-correo@example.com" method="POST" class="flex flex-col gap-4  max-w-md">
             <!-- Nombre del cliente -->
              <label for="nombre" class="font-extralight text-2xs lg:text-2xl">nombre*</label>
-            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="Nombre y apellido" class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none  placeholder:text-2xs lg:text-3xl lg:placeholder:text-3xl">
+            <input id="nombre" onchange="this.classList.toggle('text-white', this.value !== '')" type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="Nombre y apellido" class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none  placeholder:text-2xs lg:text-3xl lg:placeholder:text-3xl">
 
             <!-- Correo -->
              <label for="email" class="font-extralight text-2xs lg:text-2xl">correo*</label>
@@ -47,3 +47,46 @@
     }
 
 </style>
+<script is:inline>
+(() => {
+  const navEntries = performance.getEntriesByType("navigation");
+  const isReload = navEntries.length && navEntries[0].type === "reload";
+
+  if (isReload) {
+    localStorage.clear(); // Borra todo lo guardado
+  }
+})();
+function updateTextColor(el) {
+  const shouldBeWhite = el.tagName === 'SELECT'
+    ? el.selectedIndex > 0
+    : el.value !== '';
+  el.classList.toggle('text-gray', shouldBeWhite);
+}
+
+function hydrateFormData() {
+  const form = document.querySelector('form');
+  if (!form) return;
+
+  const elements = form.elements;
+  for (let i = 0; i < elements.length; i++) {
+    const el = elements[i];
+    if (!el.name) continue;
+
+    const savedValue = localStorage.getItem(el.name);
+    if (savedValue) {
+      el.value = savedValue;
+      updateTextColor(el);
+    }
+
+    const eventType = el.tagName === 'SELECT' ? 'change' : 'input';
+    el.addEventListener(eventType, () => {
+      localStorage.setItem(el.name, el.value);
+      updateTextColor(el);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', hydrateFormData);
+document.addEventListener('astro:after-swap', hydrateFormData);
+
+</script>
