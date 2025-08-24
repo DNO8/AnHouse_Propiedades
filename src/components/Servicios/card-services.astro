@@ -2,15 +2,15 @@
 let {title,description,reference,mask} = Astro.props;
 ---
 
-<div class="group relative flex flex-col items-center justify-center w-3/4 h-full hover:-translate-y-5.5 transition-all duration-300 ease-in-out">
+<div class="group relative flex flex-col items-center justify-center w-3/4 h-full hover:-translate-y-5.5 transition-all duration-300 ease-in-out ">
   <a href={`/servicios${reference}`} class="relative w-full h-full">
-    <article class="relative flex flex-col justify-center w-full h-full p-6 backdrop-invert-25 mask-b-from-85% to-100% shadow-lg rounded-lg max-lg:p-3 overflow-hidden">
+    <article class="relative flex flex-col justify-center w-full h-full p-6 bg-gradient-to-br from-20% from-[#5c5c5b] to-transparent group-hover:bg-none  mask-b-from-85% to-100% shadow-lg rounded-lg max-lg:p-3 overflow-hidden">
       <img 
         src={mask}
         alt="mask-image"
-        class="absolute inset-0 w-full h-full object-cover scale-110 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-30 group-hover:scale-100 z-0"
+        loading="lazy"
+        class="absolute inset-0 w-full h-full object-cover scale-110 opacity-30 transition-all duration-500 ease-in-out  group-hover:scale-100 z-0"
       />
-      <div class="absolute inset-0 z-0"></div>
       <div class="relative z-10 text-center mb-4 text-5xl font-extralight text-white">
         <h1 transition:name={`t-${title}`} transition:animate="fade" class="group-hover:text-amber-400">{title}</h1>
       </div>

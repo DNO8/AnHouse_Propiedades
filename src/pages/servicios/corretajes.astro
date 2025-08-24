@@ -1,13 +1,16 @@
 ---
 import LayoutPages from "../../layouts/Layout-Pages.astro"
 import NavGeneral from "../../components/NavGeneral.astro"
+import GridPropiedades from "../../components/corretaje/grid-propiedades.astro"
 ---
 
 <LayoutPages>
     <NavGeneral/>
-    <main class="w-full h-screen flex flex-col items-center justify-center text-white">
-        <h1 transition:name="t-Corretaje" transition:animate="fade" class="text-8xl text-amber-200">Corretajes</h1>
-        seccion de corretajes
+    <main class="w-full h-screen grid grid-rows-4 place-items-center text-white">
+        <h1 transition:name="t-Corretaje" transition:animate="fade" class="font-[800] text-5xl mt-8 text-amber-200 md:text-6xl lg:text-7xl xl:text-center">Propiedades</h1>
         <h1>A&C Propiedades</h1>
+        <div>
+            <GridPropiedades/>
+        </div>
     </main>
 </LayoutPages>

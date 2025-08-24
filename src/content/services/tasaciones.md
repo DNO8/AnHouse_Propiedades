@@ -1,6 +1,6 @@
 ---
 titulo: Tasaciones
-descripcion: Si no sabes cual es el valor de tu propiedad, con A&C Propiedades no tendra que preocuparte, realizamos tasaciones de propiedades de forma completamente presencial. Valorizamos tu casa por el sector, materiales, anexos y muchas otras variables que online seria muy dificil de revisar con nosotros tendras un contacto directo y fisico.
+descripcion: Si no sabes cual es el valor de tu propiedad, con AnHouse Propiedades no tendra que preocuparte, realizamos tasaciones de propiedades de forma completamente presencial. Valorizamos tu casa por el sector, materiales, anexos y muchas otras variables que online seria muy dificil de revisar con nosotros tendras un contacto directo y fisico.
 referencia: /tasaciones
 mask: /images/tasas1.jpg
 ---

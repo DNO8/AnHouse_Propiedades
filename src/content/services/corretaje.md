@@ -1,8 +1,8 @@
 ---
 titulo: Corretaje
-descripcion: Para vender tu propiedad existen muchas maneras pero ninguna como la de A&C Propiedades, asegurate y no pierda la oportunidad de vender tu propiedad.
+descripcion: Para vender tu propiedad existen muchas maneras pero ninguna como la de AnHouse Propiedades, asegurate y no pierda la oportunidad de vender tu propiedad.
 referencia: /corretajes
-mask: /images/propertyBroker3.jpg
+mask: /images/landing2.jpg
 ---
 lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec magna enim. Nunc vehicula sem et varius luctus. Curabitur aliquam facilisis elementum. Integer blandit urna nec tortor rutrum imperdiet. Ut nec lectus leo. Cras ac enim purus. In ac eros non tellus malesuada placerat. Nulla nisl libero, fringilla non metus non, ornare molestie ipsum. Pellentesque turpis justo, efficitur nec cursus at, aliquam sagittis nunc. Aliquam a mi odio. Mauris ligula orci, gravida eu ornare at, blandit ac sem. In ut libero risus.
 
