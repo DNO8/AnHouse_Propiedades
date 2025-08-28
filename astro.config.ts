@@ -11,10 +11,4 @@ export default defineConfig({
 
   devToolbar:{enabled: false},
   integrations: [],
-  env:{
-    schema:{
-       MAIL_API:envField.string({context:'server',access:'public'}),
-       MAIL_API_KEY:envField.string({context:'server', access:'secret'})
-    }
-  }
 });
