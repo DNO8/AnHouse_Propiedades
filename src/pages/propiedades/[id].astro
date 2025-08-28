@@ -1,9 +1,9 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection,render } from "astro:content"
-import LayoutPages from "../../layouts/Layout-Pages.astro";
-import NavGeneral from "../../components/NavGeneral.astro";
-import GaleriaPropiedades from "../../components/corretaje/galeria-propiedades.astro";
+import LayoutPages from "@layouts/Layout-Pages.astro";
+import NavGeneral from "@components/NavGeneral.astro";
+import GaleriaPropiedades from "@components/corretaje/galeria-propiedades.astro";
 export const getStaticPaths = (async () => {
     const propiedades= await getCollection("propiedades");
 
