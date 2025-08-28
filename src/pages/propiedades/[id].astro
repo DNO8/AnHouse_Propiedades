@@ -22,8 +22,10 @@ const {Content}= await render(propiedad)
     <NavGeneral/>
     <main class="w-full h-screen grid grid-rows-[1fr_auto] place-items-center text-white overflow-y-scroll pt-15  ">
         <div class="grid grid-cols-1 md:grid-cols-2">
+            
                  <!-- Galeria de imagenes  -->
             <section aria-label="Galeria de la propiedad">
+                <a href="/servicios/corretajes" class="text-white relative top-15 left-10 underline-animation"><span class="text-lg lg:text-xl">←Volver atras</span></a>
                 <div class="pt-26">
                     <!-- Galeria de imagenes  -->
                      <GaleriaPropiedades listaImagenes={galeria} />
@@ -84,3 +86,24 @@ const {Content}= await render(propiedad)
     
 
 </LayoutPages>
+
+<style>
+.underline-animation::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #D5BD27;
+  transition: width 0.3s;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.underline-animation:hover::after {
+  width: 100%;
+}
+*{
+        font-family: EBGaramond, sans-serif;
+}
+</style>
