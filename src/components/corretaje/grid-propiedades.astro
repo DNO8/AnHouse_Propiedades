@@ -1,0 +1,115 @@
+---
+interface Propiedad {
+  slug: string;
+  data: {
+    titulo: string;
+    ubicacion: string;
+    dormitorios: number;
+    baños: number;
+    superficie_construida: number;
+    portada:string;
+    estado:string;
+  };
+}
+interface Props {
+  listaPropiedades: Propiedad[];
+}
+const {listaPropiedades}= Astro.props
+
+---
+<section aria-label="Propiedades publicadas por AnHouse">
+  <div class="w-full h-full grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+    {
+      listaPropiedades.map((propiedad) => {
+        const { slug, data } = propiedad;
+        const { titulo, ubicacion, dormitorios, baños, superficie_construida, portada, estado } = data;
+        const bgColor = estado === 'Arriendo' ? 'bg-blue-500' : estado==='En venta'?'bg-red-500' :'bg-green-500';
+        return (
+          <article class="bg-transparent backdrop-blur-2xl shadow rounded overflow-hidden flex flex-col hover:shadow-lg">
+            <a href={`/propiedades/${slug}`} class="relative w-full h-60">
+              <img src={portada} alt="img-propiedad"  class="object-cover w-full h-full scale-110 transition-all duration-500 ease-in-out hover:scale-100" />
+              <span class={`absolute top-2 right-2 ${bgColor} text-[#f9f6ee] font-[600] text-sm px-2 py-1 rounded`}>{estado}</span>
+            </a>
+            <div class="p-4 flex flex-col items-center text-center">
+              <a href={`/propiedades/${slug}`} class="w-full">
+                <h2 class="text-lg font-semibold mb-1 text-[#fcf5e5]" >{titulo}</h2>
+                <span class="text-[#fcf5e5] text-sm">{ubicacion}</span>
+              </a>
+              <div class="grid grid-cols-3 gap-4 text-center pt-3">
+                {/* Dormitorios */}
+                <div class="flex flex-col items-center border-r-2 border-gray-200">
+                  <div class="flex items-center gap-1">
+                    <span class="mr-3">{dormitorios}</span>
+                      <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 20V18.5M5 20V18.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                          <path d="M2 15C2 14.0681 2 13.6022 2.15224 13.2346C2.35523 12.7446 2.74458 12.3552 3.23463 12.1522C3.60218 12 4.06812 12 5 12H19C19.9319 12 20.3978 12 20.7654 12.1522C21.2554 12.3552 21.6448 12.7446 21.8478 13.2346C22 13.6022 22 14.0681 22 15C22 15.9319 22 16.3978 21.8478 16.7654C21.6448 17.2554 21.2554 17.6448 20.7654 17.8478C20.3978 18 19.9319 18 19 18H5C4.06812 18 3.60218 18 3.23463 17.8478C2.74458 17.6448 2.35523 17.2554 2.15224 16.7654C2 16.3978 2 15.9319 2 15Z" stroke="#fff" stroke-width="1.5"/>
+                          <path d="M21 12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12" stroke="#fff" stroke-width="1.5"/>
+                          <path d="M18.5 12V10.5C18.5 8.61438 18.5 7.67157 17.9142 7.08579C17.3284 6.5 16.3856 6.5 14.5 6.5H9.5C7.61438 6.5 6.67157 6.5 6.08579 7.08579C5.5 7.67157 5.5 8.61438 5.5 10.5V12" stroke="#fff" stroke-width="1.5"/>
+                          <path d="M12 7V12" stroke="#fff" stroke-width="1.5"/>
+                      </svg>
+                  </div>
+                  <p class="text-xs text-left text-[#fcf5e5] mr-3">Dormitorios</p>
+                </div>
+
+                {/* Baños */}
+                <div class="flex flex-col items-center border-r-2 border-gray-200">
+                  <div class="flex items-center gap-1">
+                    <span class="mr-3">{baños}</span>
+                      <svg width="30px" height="30px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="var(--ci-primary-color, #fff)" d="M464,280H80V100A51.258,51.258,0,0,1,95.113,63.515l.4-.4a51.691,51.691,0,0,1,58.6-10.162,79.1,79.1,0,0,0,11.778,96.627l10.951,10.951-20.157,20.158,22.626,22.626,20.157-20.157h0L311.157,71.471h0l20.157-20.157L308.687,28.687,288.529,48.844,277.578,37.893a79.086,79.086,0,0,0-100.929-8.976A83.61,83.61,0,0,0,72.887,40.485l-.4.4A83.054,83.054,0,0,0,48,100V280H16v32H48v30.7a23.95,23.95,0,0,0,1.232,7.589L79,439.589A23.969,23.969,0,0,0,101.766,456h12.9L103,496h33.333L148,456H356.1l12,40H401.5l-12-40h20.73A23.969,23.969,0,0,0,433,439.589l29.766-89.3A23.982,23.982,0,0,0,464,342.7V312h32V280ZM188.52,60.52a47.025,47.025,0,0,1,66.431,0L265.9,71.471,199.471,137.9,188.52,126.951A47.027,47.027,0,0,1,188.52,60.52ZM432,341.4,404.468,424H107.532L80,341.4V312H432Z" class="ci-primary"/>
+                      </svg>
+                  </div>
+                  <p class="text-xs text-[#fcf5e5] mr-3">Baños</p>
+                </div>
+
+                {/* Superficie */}
+                <div class="flex flex-col items-center border-r-2 border-gray-200 lg:items-start ">
+                  <div class="flex items-center gap-1">
+                    <span class="mr-3">{superficie_construida}</span>
+                      <svg fill="#fff" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                              viewBox="0 0 512 512" xml:space="preserve">
+                            <g>
+                              <g>
+                                <path d="M492.499,19.502c-26.011-26.001-68.329-26.006-94.329,0.006c-33.372,33.371-69.409,69.407-143.827,143.822
+                                  c-1.77,1.764-3.116,3.909-3.946,6.27l-38.24,108.99c-2.122,6.046-0.586,12.777,3.946,17.31c4.529,4.529,11.239,6.068,17.31,3.946
+                                  l108.99-38.24c2.361-0.83,4.506-2.177,6.27-3.946c74.374-74.374,110.474-110.474,143.827-143.827
+                                  C518.499,87.825,518.499,45.513,492.499,19.502z M255.114,256.887l17.271-49.223l31.953,31.953L255.114,256.887z M468.919,90.251
+                                  l-23.583,23.583l-47.169-47.166l23.582-23.582c13-13.005,34.164-13.005,47.17,0C481.913,56.092,481.913,77.245,468.919,90.251z"/>
+                              </g>
+                            </g>
+                            <g>
+                              <g>
+                                <path d="M506.481,483.536c-22.146-22.145-96.612-96.613-180.742-180.742l-81.286,28.523c-5.368,1.873-10.927,2.817-16.56,2.817
+                                  c-6.661,0-13.12-1.298-19.095-3.765l53.118,53.118c10.486,10.474,3.037,28.464-11.789,28.464h-133.4
+                                  c-9.211,0-16.675-7.464-16.675-16.675v-133.4c0-14.855,18.018-22.26,28.464-11.789l53.398,53.398
+                                  c-4.72-11.262-5.382-24.091-1.223-35.941l28.52-81.279C124.954,102.008,50.415,27.468,28.465,5.519
+                                  C18.024-4.958,0.001,2.46,0.001,17.309V145.15h33.35c9.211,0,16.675,7.464,16.675,16.675c0,9.211-7.464,16.675-16.675,16.675
+                                  H0.001v33.35h33.35c9.211,0,16.675,7.464,16.675,16.675c0,9.211-7.464,16.675-16.675,16.675H0.001v33.35h33.35
+                                  c9.211,0,16.675,7.464,16.675,16.675c0,9.211-7.464,16.675-16.675,16.675H0.001v33.35h33.35c9.211,0,16.675,7.464,16.675,16.675
+                                  c0,9.211-7.464,16.675-16.675,16.675H0.001v33.35h33.35c9.211,0,16.675,7.464,16.675,16.675c0,9.211-7.464,16.675-16.675,16.675
+                                  H0.001v50.025c0,9.211,7.464,16.675,16.675,16.675h478.016C509.527,512,516.953,494.007,506.481,483.536z"/>
+                              </g>
+                            </g>
+                      </svg>
+                  </div>
+                  <p class="text-xs text-[#fcf5e5] lg:text-center mr-3 md:text-sm ">metros<sup>2</sup></p>
+                </div>
+              </div>
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+ 

@@ -2,7 +2,7 @@
 titulo: Asesorias
 descripcion: Si tienes dudas de como vender tu casa y hacer lo necesario para poder venderla pronto no dudes en cotizar nuestras asesorias, completamente presenciales para que tu y tu propiedad tengan la valoracion mas exacta posible, considerando una variedad de topicos.
 referencia: /asesorias
-mask: /images/landing3.jpg
+mask: /images/landing3.webp
 
 ---
 lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec magna enim. Nunc vehicula sem et varius luctus. Curabitur aliquam facilisis elementum. Integer blandit urna nec tortor rutrum imperdiet. Ut nec lectus leo. Cras ac enim purus. In ac eros non tellus malesuada placerat. Nulla nisl libero, fringilla non metus non, ornare molestie ipsum. Pellentesque turpis justo, efficitur nec cursus at, aliquam sagittis nunc. Aliquam a mi odio. Mauris ligula orci, gravida eu ornare at, blandit ac sem. In ut libero risus.

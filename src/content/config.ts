@@ -15,5 +15,27 @@ const FAQ = defineCollection({
         descripcion: z.string(),
     })
 })
+const propiedades=defineCollection({
+    schema:z.object({
+        titulo:z.string().nonempty(),
+        ubicacion:z.string().nonempty(),
+        tipo:z.string().nonempty(),
+        estado:z.string().nonempty(),
+        precio_clp:z.number().nonnegative(),
+        precio_uf:z.number().nonnegative(),
+        superficie_total:z.number().nonnegative(),
+        superficie_construida:z.number().nonnegative(),
+        dormitorios:z.number().max(8).nonnegative(),
+        pisos:z.number().max(4).nonnegative(),
+        baños:z.number().max(5).nonnegative(),
+        estacionamientos:z.number().nonnegative(),
+        bodega:z.boolean(),
+        gastos_comunes:z.number().nonnegative(),
+        amoblado:z.boolean(),
+        portada:z.string().nonempty(),
+        galeria:z.array(z.string()).nonempty(),
 
-export const collections = {services,FAQ};
+    })
+})
+
+export const collections = {services,FAQ,propiedades};

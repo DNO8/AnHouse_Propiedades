@@ -10,9 +10,9 @@ const servicios = await getCollection("services");
 
 <LayoutPages>
     <NavGeneral/>
-    <main class="w-screen min-h-screen bg-no-repeat bg-cover flex flex-col items-center justify-center text-white pt-15">
+    <main class="w-screen min-h-screen bg-no-repeat bg-cover flex flex-col items-center justify-center text-white pt-20 sm:pt-25">
         <div class="text-center mb-12 w-1/2 max-lg:w-3/4">
-            <h1 transition:name="t-servicios" transition:animate="fade" class="text-amber-200 font-[800]">Servicios</h1>
+            <h1 transition:name="t-servicios" transition:animate="fade" class="text-amber-200 font-[800] text-5xl mb-3 lg:text-7xl">Servicios</h1>
             <p>En esta sección encontrarás información sobre nuestros servicios de venta y renta de propiedades. Da click para saber mas de nuestros</p>
         </div>
 
@@ -32,7 +32,5 @@ const servicios = await getCollection("services");
     }
     h1{
         font-family: FiraMono;
-        font-size: 4rem;
-        margin-bottom: 1rem;
     }
 </style>

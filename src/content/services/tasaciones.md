@@ -2,7 +2,7 @@
 titulo: Tasaciones
 descripcion: Si no sabes cual es el valor de tu propiedad, con AnHouse Propiedades no tendra que preocuparte, realizamos tasaciones de propiedades de forma completamente presencial. Valorizamos tu casa por el sector, materiales, anexos y muchas otras variables que online seria muy dificil de revisar con nosotros tendras un contacto directo y fisico.
 referencia: /tasaciones
-mask: /images/tasas1.jpg
+mask: /images/tasas1.webp
 ---
 lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec magna enim. Nunc vehicula sem et varius luctus. Curabitur aliquam facilisis elementum. Integer blandit urna nec tortor rutrum imperdiet. Ut nec lectus leo. Cras ac enim purus. In ac eros non tellus malesuada placerat. Nulla nisl libero, fringilla non metus non, ornare molestie ipsum. Pellentesque turpis justo, efficitur nec cursus at, aliquam sagittis nunc. Aliquam a mi odio. Mauris ligula orci, gravida eu ornare at, blandit ac sem. In ut libero risus.
 

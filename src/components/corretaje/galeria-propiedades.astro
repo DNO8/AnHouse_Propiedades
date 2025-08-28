@@ -1,0 +1,82 @@
+---
+import { getEntry } from 'astro:content';
+import sharp from 'sharp';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import type { CollectionEntry } from 'astro:content';
+
+type PropiedadEntry = CollectionEntry<'propiedades'>;
+type Imagen = {
+  src: string;
+  width: number;
+  height: number;
+};
+
+const id = Astro.params.id as string;
+
+const entry = await getEntry<'propiedades',string>({ collection: 'propiedades', id });
+if (!entry) throw new Error(`No se encontró la propiedad con id “${id}”`);
+const slug=entry.id;
+
+// 3. Leer metadata de imágenes
+const galeria:Imagen[] = await Promise.all(
+  entry.data.galeria.map(async (imgPath: string) => {
+    const absPath = new URL(`../../../public${imgPath}`, import.meta.url);
+    const imgBuffer = await fs.readFile(absPath);
+    const metadata = await sharp(imgBuffer).metadata();
+
+    return {
+      src: imgPath,
+      width: metadata.width || 800,
+      height: metadata.height || 600,
+    };
+  })
+);
+---
+<!-- HTML de la galería -->
+<div class="pswp-gallery grid grid-cols-2 md:grid-cols-3 w-3/4 mx-auto gap-4" id="gallery">
+  {galeria.map((img) => (
+    <a 
+      href={img.src}
+      data-pswp-width={img.width}
+      data-pswp-height={img.height}
+      class="relative group"
+      aria-label={`galeria-${slug}`}
+    >
+      <img src={img.src} alt="" class="w-full h-auto object-cover rounded-2xl transition group-hover:shadow-2xl "  loading="lazy" />
+      <img src={img.src} alt="" class="blur-lg absolute group-hover:contrast-150 inset-0 -z-10" loading="lazy" />
+    </a>
+  ))}
+</div>
+
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+    import 'photoswipe/style.css';
+
+    let lightbox: PhotoSwipeLightbox | null = null;
+
+    function initLightbox(): void {
+    // Evita múltiples instancias
+    if (lightbox) {
+        lightbox.destroy();
+        lightbox = null;
+    }
+
+    const gallery = document.querySelector('#gallery');
+    if (!gallery) return;
+
+    lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        pswpModule: () => import('photoswipe'),
+    });
+
+    lightbox.init();
+    }
+
+    // Inicializa al cargar la página
+    document.addEventListener('DOMContentLoaded', initLightbox);
+
+    // Vuelve a inicializar después de cada transición
+    document.addEventListener('astro:page-load', initLightbox);
+</script>

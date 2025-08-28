@@ -1,0 +1,86 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection,render } from "astro:content"
+import LayoutPages from "../../layouts/Layout-Pages.astro";
+import NavGeneral from "../../components/NavGeneral.astro";
+import GaleriaPropiedades from "../../components/corretaje/galeria-propiedades.astro";
+export const getStaticPaths = (async () => {
+    const propiedades= await getCollection("propiedades");
+
+    return propiedades.map((propiedad)=>({
+        params:{id:propiedad.slug},
+        props:{propiedad}
+    }));
+}) satisfies GetStaticPaths;
+const {propiedad}=Astro.props
+const {data,slug}=propiedad
+const {titulo,superficie_total,superficie_construida,baños,pisos,dormitorios,ubicacion,precio_clp,estacionamientos,precio_uf,galeria,}= data
+const {Content}= await render(propiedad)
+---
+
+<LayoutPages>
+    <NavGeneral/>
+    <main class="w-full h-screen grid grid-rows-[1fr_auto] place-items-center text-white overflow-y-scroll pt-15  ">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+                 <!-- Galeria de imagenes  -->
+            <section aria-label="Galeria de la propiedad">
+                <div class="pt-26">
+                    <!-- Galeria de imagenes  -->
+                     <GaleriaPropiedades listaImagenes={galeria} />
+                </div>
+            </section>  
+                <!-- detalle de la propiedad -->
+            <section aria-label="detalle de la Propiedad" class="w-full h-3/4 mb-15">
+                <div class="flex flex-col gap-3 justify-center items-center pt-26">
+                    <div class="w-full p-3">
+                        <div class="flex flex-row justify-around p-3">
+                            <span class="text-xl text-center  xl:text-2xl mb-6 text-amber-200 font-[800]">{ubicacion}</span>
+                            <span class="text-xl text-center  xl:text-2xl mb-6 text-amber-200 font-[800]">{precio_uf} UF</span>
+                        </div>
+                        <div class="flex flex-row justify-center">
+                        <h1 class="text-3xl text-center  xl:text-5xl mb-6 text-amber-200 font-[800]" >{titulo}</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-start items-start w-3/4 px-6 py-4 md:px-10 md:py-6 bg-white/10 rounded-lg shadow-md">
+                        <ul class="w-full space-y-2 text-sm md:text-base text-white">
+                            <li class="flex justify-between border-b border-white/20 pb-1 mb-6 lg:mb-8">
+                            <span class="font-semibold">Precio:</span>
+                            <span>{precio_clp.toLocaleString('es-CL',{style:"currency", currency:'CLP'})}</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/20 pb-1 mb-4 lg:mb-6">
+                            <span class="font-semibold">Metros Totales:</span>
+                            <span>{superficie_total} m<sup>2</sup></span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/20 pb-1 mb-4 lg:mb-6">
+                            <span class="font-semibold">Metro Construidos:</span>
+                            <span>{superficie_construida} m<sup>2</sup></span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/20 pb-1 mb-4 lg:mb-6">
+                            <span class="font-semibold">Dormitorios:</span>
+                            <span>{dormitorios}</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/20 pb-1 mb-4 lg:mb-6">
+                            <span class="font-semibold">Baños:</span>
+                            <span>{baños}</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/20 pb-1 mb-4 lg:mb-6">
+                            <span class="font-semibold">Pisos:</span>
+                            <span>{pisos}</span>
+                            </li>
+                            <li class="flex justify-between">
+                            <span class="font-semibold">Estacionamientos:</span>
+                            <span>{estacionamientos}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- contenido del markdown -->
+        <section class="w-full prose prose-invert p-3 flex flex-col lg:text-2xl  justify-center items-center mb-5 md:mb-15">
+            <Content/>
+        </section>
+    </main>
+    
+
+</LayoutPages>
