@@ -2,7 +2,54 @@
 const {descripcion}= Astro.props;
 ---
 
-<div class="col-span-1">
-    <h1 transition:name="t-nosotros" transition:animate="fade" class="text-7xl md:text-8xl text-amber-200">Sobre Nosotros</h1>
-    <p class="text-center text-lg mt-4 prose prose-invert">{descripcion}</p>
+<div class="col-span-1 flex flex-col justify-center items-center gap-15 w-full">
+  <h1 transition:name="t-nosotros" transition:animate="fade" class="text-7xl text-center font-[800] md:text-8xl text-amber-200">Sobre Nosotros</h1>
+  <p class="text-center text-lg mt-4 prose prose-invert">{descripcion}</p>
+
+<!-- Marquee Container -->
+<div class="marquee-container mask-x-from-90% to-100%">
+  <!-- Logos wrapper (animated) -->
+  <div class="marquee-content flex flex-row gap-8 ">
+    <div class="marquee-track ">
+      <img src="/logo/logo-doomos.webp" alt="Logo Doomos" class="h-12 inline-block" />
+      <img src="/logo/logo-portalinmobiliario.webp" alt="Logo Portal Inmobiliario" class="h-12 inline-block" />
+      <img src="/logo/logo-toctoc.webp" alt="Logo Toctoc" class="h-12 inline-block" />
+      <img src="/logo/logo-yapo.webp" alt="Logo Yapo" class="h-12 inline-block" />
+    </div>
+    <div class="marquee-track">
+      <img src="/logo/logo-doomos.webp" alt="Logo Doomos" class="h-12 inline-block" />
+      <img src="/logo/logo-portalinmobiliario.webp" alt="Logo Portal Inmobiliario" class="h-12 inline-block" />
+      <img src="/logo/logo-toctoc.webp" alt="Logo Toctoc" class="h-12 inline-block" />
+      <img src="/logo/logo-yapo.webp" alt="Logo Yapo" class="h-12 inline-block" />
+    </div>
+  </div>
 </div>
+
+<style>
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+
+  .marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 2rem;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

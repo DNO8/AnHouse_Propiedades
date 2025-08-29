@@ -1,6 +1,6 @@
 ---
 titulo: Preguntas Frecuentes
-descripcion: Somos una inmobiliaria dedicada a entregar un servicio personalizado en corretaje, asesorías legales y tasaciones profesionales. Nuestro equipo está conformado por expertos con años de experiencia en el rubro.
+descripcion: Somos una inmobiliaria dedicada a entregar un servicio personalizado en corretaje, asesorías legales y tasaciones profesionales. Nuestro equipo está conformado por expertos con años de experiencia en el rubro. Te publicamos en las plataformas más competitivas para lograr una venta segura y rapida.
 ---
 
 ## ¿Qué incluye el servicio de corretaje?
@@ -13,7 +13,7 @@ Sí, contamos con tasadores certificados que cumplen los requisitos para bancos 
 
 ## ¿Cuál es el valor de una asesoría legal inmobiliaria?
 
-Las asesorías parten desde $50.000 dependiendo de la complejidad del caso, no dudes en hablar con nosotros
+Las asesorías varian dependiendo de la complejidad del caso, no dudes en hablar con nosotros y te damos un precio.
 
 ## ¿Puedo contratar solo uno de los servicios?
 
