@@ -136,7 +136,7 @@
       class="w-1/3 h-10 text-2xs bg-transparent border-b-2 border-gray-400 focus:border-amber-400 focus:outline-none placeholder:text-2xs lg:placeholder:text-lg lg:text-2xl"
     />
   </div>
-    <input type="hidden" name="_next" value="https://anhousepropiedades.cl/servicios/tasaciones">
+    <input type="hidden" name="_next" id="_next" value="https://anhousepropiedades.cl/servicios/tasaciones">
     <input type="hidden" name="_captcha" value="false">
   <!-- Botón de enviar -->
   <div class="text-right flex flex-col justify-center items-center md:justify-end md:items-end">
@@ -146,6 +146,7 @@
     >
       Solicitar Tasación
     </button>
+
   </div>
 </form>
 <style>
@@ -169,6 +170,7 @@
     localStorage.clear(); // Borra todo lo guardado
   }
 })();
+
 function updateTextColor(el) {
   const shouldBeWhite = el.tagName === 'SELECT'
     ? el.selectedIndex > 0
@@ -201,17 +203,12 @@ function hydrateFormData() {
 
 document.addEventListener('DOMContentLoaded', hydrateFormData);
 document.addEventListener('astro:after-swap', hydrateFormData);
-
 document.querySelector('form').addEventListener('submit', (e) => {
   console.log('se mando el evento submit');
   if (!e.target.checkValidity()) {
     e.preventDefault();  // Previene el envío si no es válido
     e.target.reportValidity(); // Muestra el mensaje de error nativo
-  }else
-  {
-    e.target.reset();  
-    console.log('Formulario válido. Datos borrados.');
-  }
-  
+  }  
 });
+
 </script>
