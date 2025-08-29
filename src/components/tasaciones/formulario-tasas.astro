@@ -209,7 +209,6 @@ document.querySelector('form').addEventListener('submit', (e) => {
     e.target.reportValidity(); // Muestra el mensaje de error nativo
   }else
   {
-    e.preventDefault();
     e.target.reset();  
     console.log('Formulario válido. Datos borrados.');
   }
