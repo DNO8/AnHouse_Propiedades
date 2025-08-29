@@ -1,8 +1,8 @@
 ---
-
+import { MAIL_HASH } from "astro:env/server"
 ---
 
-<form action="https://formsubmit.co/33de8c592ef81d7b226bc92b040c23cc" method="POST" class="w-full p-6 bg-transparent shadow-md rounded-md space-y-6 mask-l-from-96% to-100% md:p-12 lg:p-26 xl:p-6 xl:text-2xs">
+<form action={`https://formsubmit.co/${MAIL_HASH}`} method="POST" class="w-full p-6 bg-transparent shadow-md rounded-md space-y-6 mask-l-from-96% to-100% md:p-12 lg:p-26 xl:p-6 xl:text-2xs">
   <h2 class="text-2xl font-semibold text-[#FCF5E5] flex flex-col justify-center items-center">Descubre cuánto vale tu propiedad</h2>
 
   <!-- Tipo de vivienda -->

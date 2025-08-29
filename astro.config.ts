@@ -16,5 +16,10 @@ export default defineConfig({
   },
   devToolbar:{enabled: false},
   integrations: [],
+  env:{
+    schema:{
+      MAIL_HASH: envField.string({context:'server', access:'public'})
+    }
+  }
 
 });
