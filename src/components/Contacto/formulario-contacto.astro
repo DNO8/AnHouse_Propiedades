@@ -3,7 +3,7 @@ import { MAIL_HASH } from "astro:env/server"
 ---
 <div class="w-full h-screen py-30 bg-transparent mask-l-from-96% to-100% rounded-lg shadow-md cols-span-1 flex flex-col gap-4 justify-start items-center max-sm:py-4 max-md:py-22 text-[#f9f6ee] max-2xl:py-25">
             
-            <form action={`https://formsubmit.co/${MAIL_HASH}`} method="POST" class="flex flex-col gap-4  max-w-md">
+            <form action={`https://formsubmit.co/${MAIL_HASH}`} method="POST" id="form-contacto" class="flex flex-col gap-4  max-w-md">
             <!-- Nombre del cliente -->
              <label for="nombre" class="font-extralight text-2xs lg:text-2xl">nombre*</label>
             <input id="nombre" onchange="this.classList.toggle('text-white', this.value !== '')" type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="Nombre y apellido" class="w-full h-10 text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none  placeholder:text-2xs lg:text-3xl lg:placeholder:text-3xl">
@@ -41,7 +41,13 @@ import { MAIL_HASH } from "astro:env/server"
             <input type="hidden" name="_captcha" value="false">
 
             <button type="submit" class="w-full bg-amber-500 rounded-2xl hover:bg-amber-700 hover:shadow-2xs hover:translate-y-1.5 transition-all duration-300 ease-in-out text-[20px] py-0.5 ">Enviar consulta</button>
-            </form>
+              <div
+                id="pill"
+                class="absolute left-1/2 -translate-x-1/2 mt-2 bg-green-500 text-white text-sm px-4 py-2 rounded-xl w-[150px] shadow sm:left-3/4 hidden"
+              >
+                ✅ Datos enviados
+              </div>  
+          </form>
         </div>
 <style>
     #mensaje{
@@ -51,6 +57,8 @@ import { MAIL_HASH } from "astro:env/server"
 
 </style>
 <script is:inline>
+  const pill = document.getElementById("pill");
+  const form = document.getElementById("form-contacto");
 (() => {
   const navEntries = performance.getEntriesByType("navigation");
   const isReload = navEntries.length && navEntries[0].type === "reload";
@@ -91,5 +99,13 @@ function hydrateFormData() {
 
 document.addEventListener('DOMContentLoaded', hydrateFormData);
 document.addEventListener('astro:after-swap', hydrateFormData);
+document.addEventListener('submit', async(e)=>{
+  
+  pill.classList.remove("hidden");
+  setTimeout(() => {
+          pill.classList.add("hidden");
+        }, 3000);
+  form.reset();
+})
 
 </script>
