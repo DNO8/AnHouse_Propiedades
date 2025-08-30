@@ -146,7 +146,12 @@ import { MAIL_HASH } from "astro:env/server"
     >
       Solicitar Tasación
     </button>
-
+    <div
+      id="pill"
+      class="absolute left-1/2 -translate-x-1/2 mt-2 bg-green-500 text-white text-sm px-4 py-2 rounded-xl w-[150px] shadow sm:left-3/4 hidden"
+    >
+    ✅ Datos enviados
+    </div>  
   </div>
 </form>
 <style>
@@ -162,6 +167,8 @@ import { MAIL_HASH } from "astro:env/server"
   }
 </style>
 <script is:inline>
+  const pill = document.getElementById("pill");
+  const form = document.getElementById("form-contacto");
 (() => {
   const navEntries = performance.getEntriesByType("navigation");
   const isReload = navEntries.length && navEntries[0].type === "reload";
@@ -203,12 +210,13 @@ function hydrateFormData() {
 
 document.addEventListener('DOMContentLoaded', hydrateFormData);
 document.addEventListener('astro:after-swap', hydrateFormData);
-document.querySelector('form').addEventListener('submit', (e) => {
-  console.log('se mando el evento submit');
-  if (!e.target.checkValidity()) {
-    e.preventDefault();  // Previene el envío si no es válido
-    e.target.reportValidity(); // Muestra el mensaje de error nativo
-  }  
-});
+document.addEventListener('submit', async(e)=>{
+  
+  pill.classList.remove("hidden");
+  setTimeout(() => {
+          pill.classList.add("hidden");
+        }, 3000);
+  form.reset();
+})
 
 </script>
