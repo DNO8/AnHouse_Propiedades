@@ -16,7 +16,7 @@ export default defineConfig({
   }
   },
   devToolbar:{enabled: false},
-  integrations: [],
+  integrations: [sitemap()],
   env:{
     schema:{
       MAIL_HASH: envField.string({context:'server', access:'public'})
