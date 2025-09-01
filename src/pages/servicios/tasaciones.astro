@@ -6,7 +6,7 @@ import FormularioTasas from "@components/tasaciones/formulario-tasas.astro"
 
 <LayoutPages>
     <NavGeneral/>
-    <main class="w-full h-screen overflow-scroll grid grid-cols-1 items-start justify-center pt-22 text-white md:pt-26 xl:overflow-hidden lg:pt-23 lg:gap-4 xl:grid-cols-3 xl:pt-25  ">
+    <main class="w-screen h-screen overflow-scroll grid grid-cols-1 items-start justify-center pt-22 text-white md:pt-26  lg:pt-23 lg:gap-4 xl:grid-cols-3 xl:pt-25  ">
         <div class="col-span-1 w-full h-full flex flex-col items-center justify-center lg:justify-start xl:flex xl:flex-col xl:justify-center 2xl:items-center">
             <h1 transition:name="t-Tasaciones" transition:animate="fade" class="font-[800] text-5xl mb-0 text-amber-200 md:text-6xl lg:text-7xl xl:text-center">Tasaciones</h1>
             <h2 class="text-lg mb-0 mt-0 text-center text-amber-100 p-2">consulta sobre nuestros servicios de tasaciones</h2>
@@ -127,5 +127,8 @@ import FormularioTasas from "@components/tasaciones/formulario-tasas.astro"
 <style>
     .pregunta{
         font-family: FiraMono, sans-serif;
+    }  
+    main::-webkit-scrollbar {
+      display: none;
     }
 </style>

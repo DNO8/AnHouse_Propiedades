@@ -9,7 +9,7 @@ const propiedades= await getCollection("propiedades");
 
 <LayoutPages>
     <NavGeneral/>
-    <main class="w-full h-screen grid grid-cols-1 place-items-center text-white overflow-scroll xl:overflow-hidden pt-15 ">
+    <main class="w-screen h-screen grid grid-cols-1 place-items-center text-white overflow-scroll pt-15 ">
         <h1 transition:name="t-Corretaje" transition:animate="fade" class="font-[800] text-5xl mt-10 text-amber-200 md:text-6xl lg:text-7xl xl:text-center">Propiedades</h1>
         <div class="m-auto p-6">
             <GridPropiedades listaPropiedades={propiedades}/>
@@ -271,5 +271,8 @@ const propiedades= await getCollection("propiedades");
 <style>
     p{
         font-family: FiraMono;
+    } 
+    main::-webkit-scrollbar {
+      display: none;
     }
 </style>

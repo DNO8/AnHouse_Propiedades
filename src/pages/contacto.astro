@@ -7,11 +7,16 @@ import FormContacto from "@components/Contacto/formulario-contacto.astro"
 
 <LayoutPages>
     <NavGeneral/>
-    <main class=" w-full h-screen grid grid-cols-2 max-sm:grid-cols-1 overflow-hidden max-[640px]:overflow-scroll">
+    <main class=" w-screen h-screen grid grid-cols-2 max-sm:grid-cols-1 overflow-scroll">
         <!-- div de imagen que cubre media pantalla -->
         <MidLayer/>
         <!-- DIV DEL FORMULARIO DE CONTACTO -->
         <FormContacto/>
     </main>
 </LayoutPages>
+<style>
+  main::-webkit-scrollbar {
+      display: none;
+    }
+</style>
 
