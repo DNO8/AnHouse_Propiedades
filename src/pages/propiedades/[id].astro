@@ -14,7 +14,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 const {propiedad}=Astro.props
 const {data,slug}=propiedad
-const {titulo,superficie_total,superficie_construida,baños,pisos,dormitorios,ubicacion,precio_clp,estacionamientos,precio_uf,galeria,}= data
+const {titulo,superficie_total,superficie_construida,baños,pisos,dormitorios,ubicacion,estacionamientos,precio_uf,galeria,}= data
 const {Content}= await render(propiedad)
 ---
 
@@ -48,7 +48,7 @@ const {Content}= await render(propiedad)
                         <ul class="w-full space-y-2 text-sm md:text-base text-white">
                             <li class="flex justify-between border-b border-white/20 pb-1 mb-6 lg:mb-8">
                             <span class="font-semibold">Precio:</span>
-                            <span>{precio_clp.toLocaleString('es-CL',{style:"currency", currency:'CLP'})}</span>
+                            <span>{precio_uf.toLocaleString('es-CL',{style:"currency", currency:'CLP'})}</span>
                             </li>
                             <li class="flex justify-between border-b border-white/20 pb-1 mb-4 lg:mb-6">
                             <span class="font-semibold">Metros Totales:</span>

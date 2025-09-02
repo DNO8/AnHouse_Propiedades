@@ -4,7 +4,6 @@ slug: "casa-lo-barnechea"
 ubicacion: "Lo Barnechea, Santiago"
 tipo: "Casa"
 estado: "En venta"
-precio_clp: 141574320
 precio_uf: 3600
 superficie_total: 250
 superficie_construida: 200

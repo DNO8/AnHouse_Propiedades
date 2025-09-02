@@ -4,7 +4,6 @@ slug: "departamento-moderno-nunoa"
 ubicacion: "Ñuñoa, Santiago, Chile"
 tipo: "Departamento"
 estado: "Arriendo" # o "Arriendo", "Reservado", "Vendido"
-precio_clp: 700000
 precio_uf: 3800
 superficie_total: 65
 superficie_construida: 60

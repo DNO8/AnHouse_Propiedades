@@ -4,7 +4,6 @@ slug: "terreno-pucalan"
 ubicacion: "Pucalan, Valparaiso, Chile"
 tipo: "terreno"
 estado: "En venta" # o "Arriendo", "Reservado", "Vendido"
-precio_clp: 135000000
 precio_uf: 3800
 superficie_total: 5000
 superficie_construida: 0
