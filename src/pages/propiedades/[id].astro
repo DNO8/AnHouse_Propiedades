@@ -14,7 +14,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 const {propiedad}=Astro.props
 const {data,slug}=propiedad
-const {titulo,superficie_total,superficie_construida,baños,pisos,dormitorios,ubicacion,estacionamientos,precio_uf,galeria,}= data
+const {titulo,superficie_total,superficie_construida,baños,pisos,dormitorios,ubicacion,estacionamientos,precio_uf,galeria,estado,precio_clp}= data
 const {Content}= await render(propiedad)
 ---
 
@@ -38,7 +38,11 @@ const {Content}= await render(propiedad)
                     <div class="w-full p-3">
                         <div class="flex flex-row justify-around p-3">
                             <span class="text-xl text-center  xl:text-2xl mb-6 text-amber-200 font-[800]">{ubicacion}</span>
-                            <span class="text-xl text-center  xl:text-2xl mb-6 text-amber-200 font-[800]">{precio_uf.toLocaleString('es-CL',{style:"currency", currency:'CLP'})} UF</span>
+                            {
+                            estado !='Arriendo'
+                            ?<span class="text-xl text-center  xl:text-2xl mb-6 text-amber-200 font-[800]">{precio_uf.toLocaleString('es-CL',{style:"currency", currency:'CLP'})}UF</span>
+                            :<span class="text-xl text-center  xl:text-2xl mb-6 text-amber-200 font-[800]">{precio_clp.toLocaleString('es-CL',{style:"currency", currency:'CLP'})}</span> }
+                            
                         </div>
                         <div class="flex flex-row justify-center">
                         <h1 class="text-3xl text-center  xl:text-5xl mb-6 text-amber-200 font-[800]" >{titulo}</h1>

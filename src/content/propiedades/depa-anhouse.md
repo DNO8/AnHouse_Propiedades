@@ -4,7 +4,8 @@ slug: "departamento-moderno-nunoa"
 ubicacion: "Ñuñoa, Santiago, Chile"
 tipo: "Departamento"
 estado: "Arriendo" # o "Arriendo", "Reservado", "Vendido"
-precio_uf: 3800
+precio_uf: 17
+precio_clp: 700000
 superficie_total: 65
 superficie_construida: 60
 dormitorios: 2
@@ -36,7 +37,7 @@ Ideal para parejas o familias pequeñas.
 
 ---
 
-## ✨ Características
+## Características
 
 - 2 amplios dormitorios  
 - 2 baños  
@@ -51,40 +52,10 @@ Ideal para parejas o familias pequeñas.
 
 ---
 
-## 💰 Valores
+## Valores
 
-- **Valor arriendo mensual:** $700.000 CLP  
+- **Valor arriendo mensual:** $700.000 CLP  aprox.
 - **Gastos comunes mensuales:** $85.000 aprox.
+- **Canon de Arriendo ajustable 2 veces al año según IPC**-
 
 ---
-
-## 📋 Requisitos Obligatorios
-
-| Requisito                                                   | Estado |
-|-------------------------------------------------------------|--------|
-| 1 mes de arriendo                                           | ✅     |
-| 1 mes de garantía                                           | ✅     |
-| 50% del canon por gestión inmobiliaria                      | ✅     |
-| Cédula de identidad (chilena o extranjera, vigente)         | ✅     |
-| Renta demostrable (3 veces el valor del arriendo)           | ✅     |
-| Cédula de identidad ambos lados                             | ✅     |
-| Contrato laboral vigente                                    | ✅     |
-| 4 últimas liquidaciones de sueldo                           | ✅     |
-| Cotizaciones de AFP                                         | ✅     |
-| Certificado Dicom                                           | ✅     |
-| Aval con los mismos requisitos                              | ✅     |
-
----
-
-## 🧾 Persona Jurídica
-
-| Requisito                                                   | Estado |
-|-------------------------------------------------------------|--------|
-| Escritura de constitución de sociedad (vigente)             | ✅     |
-| Declaración de impuesto a la renta                          | ✅     |
-| Informe Dicom empresarial                                   | ✅     |
-| Carpeta tributaria para créditos                            | ✅     |
-| Cédula de identidad del representante legal                 | ✅     |
-| E-RUT del representante legal o empresa                     | ✅     |
-| Ingresos mínimos equivalentes a 4 veces el valor del arriendo | ✅     |
-| Aval con los mismos requisitos (si es necesario)            | ✅     |

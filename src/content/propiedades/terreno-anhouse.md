@@ -5,12 +5,13 @@ ubicacion: "Pucalan, Valparaiso, Chile"
 tipo: "terreno"
 estado: "En venta" # o "Arriendo", "Reservado", "Vendido"
 precio_uf: 3800
+precio_clp: 0
 superficie_total: 5000
 superficie_construida: 0
-dormitorios: 2
+dormitorios: 0
 pisos: 0
-baños: 2
-estacionamientos: 1
+baños: 0
+estacionamientos: 0
 bodega: false
 gastos_comunes: 0 # gastos comunes en CLP
 amoblado: false
@@ -27,35 +28,13 @@ galeria:
 
 - Superficie total: 5.000 m²  
 - Superficie construida: 5.000 m²  
-- 2 dormitorios  
-- 2 baños  
-- Estacionamiento para 1 vehículo  
 - No incluye bodega  
-- No amoblado  
-- Gastos comunes: $0 CLP  
+- Tanque de agua elevado.
+- Cercado con polines de madera y malla de alambre.
 
 ---
 
 ## ​ Valor de venta
 
-**$135.000.000 CLP**  
-**≈ 3.800 UF aprox.**
-
----
-
-##  Documentos y Requisitos Legales para Comprar Terreno en Chile
-
-| Requisito / Documento                                        | ¿Necesario? |
-|--------------------------------------------------------------|-------------|
-| Cédula de identidad vigente del comprador                     | ✅          |
-| Promesa de compraventa (opcional, pero usual)                |  Opcional  |
-| Escritura pública de compra                                  | ✅          |
-| Inscripción en el Conservador de Bienes Raíces                | ✅          |
-| Certificado de hipotecas y gravámenes                        | ✅          |
-| Certificado de dominio vigente                               | ✅          |
-| Certificado de avalúo fiscal (para cálculo impuesto + notaría)|  Recomendado |
-| Pago de impuestos notariales y derechos conservatorios        | ✅          |
-| Acreditación de fondos o financiamiento                      |  Según caso |
-| Certificados municipales (al día en impuesto territorial, subdivisión, etc.) |  Recomendado |
-
+**$3.800 UF.** +2% más IVA Comisión de Corretaje de propiedad.
 

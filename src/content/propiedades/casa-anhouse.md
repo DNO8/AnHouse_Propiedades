@@ -5,6 +5,7 @@ ubicacion: "Lo Barnechea, Santiago"
 tipo: "Casa"
 estado: "En venta"
 precio_uf: 3600
+precio_clp: 0
 superficie_total: 250
 superficie_construida: 200
 dormitorios: 4
@@ -32,7 +33,7 @@ galeria:
 
 ---
 
-## ✨ Características
+## Características
 
 - 4 amplios dormitorios  
 - 3 baños  
@@ -47,22 +48,8 @@ galeria:
 
 ---
 
-## 💰 Valor de la propiedad
+## Valor de la propiedad
 
-**$141.574.320 CLP**
+**$3.600 UF** +2% más IVA Comisión de Corretaje de propiedad. 
 
 ---
-
-## 📝 Documentación y Requisitos
-
-| Requisito                              | Estado |
-|----------------------------------------|--------|
-| Cédula de identidad vigente            | ✅     |
-| Contrato de promesa (opcional)         | ✅     |
-| Escritura pública                      | ✅     |
-| Inscripción en Conservador             | ✅     |
-| Pago de impuestos notariales           | ✅     |
-| Certificados legales de la propiedad   | ✅     |
-| Acreditación de fondos (banco lo exige)| ✅     |
-| Pie o enganche (10–20%)                | ✅     |
-

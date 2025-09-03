@@ -22,6 +22,7 @@ const propiedades=defineCollection({
         tipo:z.string().nonempty(),
         estado:z.string().nonempty(),
         precio_uf:z.number().nonnegative(),
+        precio_clp:z.number().nonnegative(),
         superficie_total:z.number().nonnegative(),
         superficie_construida:z.number().nonnegative(),
         dormitorios:z.number().max(8).nonnegative(),
