@@ -36,6 +36,5 @@ galeria:
 
 ## ​ Valor de venta
 
-<p style="text-align: center"><strong>$3.800 UF</strong></p>
-<p style="text-align: center">+2% más IVA Comisión de Corretaje de propiedad</p>
+<p style="text-align: center"><strong>$3.800 UF</strong></br>+2% más IVA Comisión de Corretaje de propiedad</p>
 
