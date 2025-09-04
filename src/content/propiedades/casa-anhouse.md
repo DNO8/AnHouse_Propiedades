@@ -50,6 +50,5 @@ galeria:
 
 ## Valor de la propiedad
 
-**$3.600 UF** +2% más IVA Comisión de Corretaje de propiedad. 
-
----
+<p style="text-align: center"><strong>$3.600 UF</strong></p>
+<p style="text-align: center">+2% más IVA Comisión de Corretaje de propiedad</p>
