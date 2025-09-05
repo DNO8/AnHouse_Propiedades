@@ -67,6 +67,7 @@ import { MAIL_HASH } from "astro:env/server"
     localStorage.clear(); // Borra todo lo guardado
   }
 })();
+
 function updateTextColor(el) {
   const shouldBeWhite = el.tagName === 'SELECT'
     ? el.selectedIndex > 0
@@ -75,7 +76,7 @@ function updateTextColor(el) {
 }
 
 function hydrateFormData() {
-  const form = document.querySelector('form');
+  
   if (!form) return;
 
   const elements = form.elements;
