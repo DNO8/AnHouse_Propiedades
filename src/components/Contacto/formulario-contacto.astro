@@ -33,11 +33,10 @@ import { MAIL_HASH } from "astro:env/server"
             <label for="mensaje" class="font-extralight text-2xs lg:text-2xl">Mensaje</label>
             <textarea id="mensaje" name="mensaje" maxlength="500" placeholder="Cuéntanos tus necesidades" class=" max-w-[200px] max-h-[150px] text-2xs bg-transparent border-b-2 border-gray-500 focus:border-amber-400 focus:outline-none placeholder:text-2xs md:max-h-[100px] md:max-w-[250px] lg:placeholder:text-3xl lg:max-w-[350px]" ></textarea>
             <p class="text-sm text-[#ffd20a]">Máximo 500 caracteres.</p>
-            <!-- Redirección a página de gracias -->
+            <!-- propiedades del form -->
 
             <input type="hidden" name="_next" value="https://anhousepropiedades.cl/contacto">
-
-            <!-- Desactivar captcha si deseas -->
+            <input type="text" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
 
             <button type="submit" class="w-full bg-amber-500 rounded-2xl hover:bg-amber-700 hover:shadow-2xs hover:translate-y-1.5 transition-all duration-300 ease-in-out text-[20px] py-0.5 ">Enviar consulta</button>
@@ -58,7 +57,6 @@ import { MAIL_HASH } from "astro:env/server"
 </style>
 <script is:inline>
   const pill = document.getElementById("pill");
-  const form = document.getElementById("form-contacto");
 (() => {
   const navEntries = performance.getEntriesByType("navigation");
   const isReload = navEntries.length && navEntries[0].type === "reload";
@@ -75,31 +73,6 @@ function updateTextColor(el) {
   el.classList.toggle('text-gray', shouldBeWhite);
 }
 
-function hydrateFormData() {
-  
-  if (!form) return;
-
-  const elements = form.elements;
-  for (let i = 0; i < elements.length; i++) {
-    const el = elements[i];
-    if (!el.name) continue;
-
-    const savedValue = localStorage.getItem(el.name);
-    if (savedValue) {
-      el.value = savedValue;
-      updateTextColor(el);
-    }
-
-    const eventType = el.tagName === 'SELECT' ? 'change' : 'input';
-    el.addEventListener(eventType, () => {
-      localStorage.setItem(el.name, el.value);
-      updateTextColor(el);
-    });
-  }
-}
-
-document.addEventListener('DOMContentLoaded', hydrateFormData);
-document.addEventListener('astro:after-swap', hydrateFormData);
 document.addEventListener('submit', async(e)=>{
   
   pill.classList.remove("hidden");
