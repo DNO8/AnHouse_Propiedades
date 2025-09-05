@@ -2,9 +2,9 @@
 let {title,description,reference,mask} = Astro.props;
 ---
 
-<div class="group relative flex flex-col items-center justify-center w-3/4 h-full hover:-translate-y-5.5 transition-all duration-300 ease-in-out ">
+<div class="card-service  group relative flex flex-col items-center justify-center w-3/4 h-full hover:-translate-y-5.5 transition-all duration-300 ease-in-out">
   <a href={`/servicios${reference}`} class="relative w-full h-full">
-    <article class="relative flex flex-col justify-center w-full h-full p-6 bg-gradient-to-br from-20% from-[#5c5c5b] to-transparent group-hover:bg-none  mask-b-from-85% to-100% shadow-lg rounded-lg max-lg:p-3 overflow-hidden">
+    <article class="relative flex flex-col justify-center w-full h-full p-6 bg-gradient-to-br from-20% from-[#5c5c5b] to-transparent group-hover:bg-none  mask-b-from-85% to-100% shadow-lg rounded-lg max-lg:p-3 overflow-hidden servicios">
       <img 
         src={mask}
         alt="mask-image"
@@ -32,3 +32,14 @@ let {title,description,reference,mask} = Astro.props;
         font-family: EBGaramond;
     }
 </style>
+<script>
+  import gsap from "gsap";
+  function animateCards(){
+  const cards = document.querySelectorAll(".servicios");
+  cards.forEach((card,index) => {
+      gsap.fromTo(card, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: "power2.out",delay: index*0.2});
+  });
+}
+  document.addEventListener('astro:after-swap', animateCards);
+  document.addEventListener('astro:page-load', animateCards);
+</script>

@@ -25,7 +25,7 @@ const {listaPropiedades}= Astro.props
         const { titulo, ubicacion, dormitorios, baños, superficie_construida, portada, estado } = data;
         const bgColor = estado === 'Arriendo' ? 'bg-blue-500' : estado==='En venta'?'bg-red-500' :'bg-green-500';
         return (
-          <article class="bg-transparent backdrop-blur-2xl shadow rounded overflow-hidden flex flex-col hover:shadow-lg">
+          <article  class="bg-transparent backdrop-blur-2xl shadow rounded overflow-hidden flex flex-col hover:shadow-lg propiedades">
             <a href={`/propiedades/${slug}`} class="relative w-full h-60">
               <img src={portada} alt="img-propiedad"  class="object-cover w-full h-full scale-110 transition-all duration-500 ease-in-out hover:scale-100" />
               <span class={`absolute top-2 right-2 ${bgColor} text-[#f9f6ee] font-[600] text-sm px-2 py-1 rounded`}>{estado}</span>
@@ -102,6 +102,18 @@ const {listaPropiedades}= Astro.props
     }
   </div>
 </section>
+<script>
+  import gsap from "gsap";
+  function animateCards(){
+  const cards = document.querySelectorAll(".propiedades");
+  cards.forEach((card,index) => {
+      gsap.fromTo(card, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: "power2.out",delay: index*0.2});
+  });
+}
+  document.addEventListener('astro:after-swap', animateCards);
+  document.addEventListener('astro:page-load', animateCards);
+
+</script>
 
 
 

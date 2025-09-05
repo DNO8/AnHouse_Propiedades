@@ -30,3 +30,9 @@ import Nav from "@components/Nav.astro";
         font-family: Aboreto;
     }
 </style>
+<script>
+    import gsap from "gsap";
+
+    const logo = document.querySelector("img");
+    gsap.fromTo(logo, {x: -50, opacity: 0}, {x: 0, opacity: 1, duration: 1.5, ease: "power2.out"});
+</script>

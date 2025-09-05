@@ -40,7 +40,7 @@ const galeria:Imagen[] = await Promise.all(
       href={img.src}
       data-pswp-width={img.width}
       data-pswp-height={img.height}
-      class="relative group"
+      class="img relative group"
       aria-label={`galeria-${slug}`}
     >
       <img src={img.src} alt="" class="w-full h-auto object-cover rounded-2xl transition group-hover:shadow-2xl "  loading="lazy" />
@@ -52,7 +52,15 @@ const galeria:Imagen[] = await Promise.all(
 <script>
     import PhotoSwipeLightbox from 'photoswipe/lightbox';
     import 'photoswipe/style.css';
-
+    import gsap from "gsap";
+    
+    function imageAnimation(){
+      const anchor= document.querySelectorAll(".img");
+      anchor.forEach((a,index) => {
+        gsap.fromTo(a, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: "power2.out",delay: index*0.1});
+    });
+    }
+    
     let lightbox: PhotoSwipeLightbox | null = null;
 
     function initLightbox(): void {
@@ -74,6 +82,8 @@ const galeria:Imagen[] = await Promise.all(
     lightbox.init();
     }
 
+    document.addEventListener('astro:after-swap', imageAnimation);
+    document.addEventListener('astro:page-load', imageAnimation);
     // Inicializa al cargar la página
     document.addEventListener('DOMContentLoaded', initLightbox);
 

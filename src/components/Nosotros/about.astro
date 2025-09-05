@@ -54,3 +54,14 @@ const {descripcion}= Astro.props;
     }
   }
 </style>
+<script>
+  import gsap from "gsap";
+  import SplitText from "gsap/SplitText";
+  gsap.registerPlugin(SplitText);
+  const container = document.querySelector(".marquee-container");
+  const text = document.querySelector("p");
+  const split = new SplitText(text, { type: "words" });
+  gsap.fromTo(split.words, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power2.out", stagger: 0.05 });
+  gsap.fromTo(container, {opacity: 0}, {opacity: 1, duration: 1.5, ease: "power2.out", delay: 0.5});
+
+</script>

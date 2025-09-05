@@ -7,3 +7,13 @@
         font-family: 'firamono'
     }
 </style>
+<script>
+    import gsap from "gsap";
+    import SplitText from "gsap/SplitText";
+    gsap.registerPlugin(SplitText);
+    document.fonts.ready.then(() => {
+        const text = document.querySelector("h1");
+        const split = new SplitText(text, { type: "chars" });
+        gsap.fromTo(split.chars, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power2.out", stagger: 0.05 });
+    });
+</script>
