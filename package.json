@@ -7,7 +7,6 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"test": "vitest",
 		"format": "biome format . --write"
 	},
 	"dependencies": {
@@ -22,7 +21,6 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.3",
 		"@tailwindcss/typography": "^0.5.16",
-		"typescript": "^5.9.2",
-		"vitest": "^3.2.4"
+		"typescript": "^5.9.2"
 	}
 }
