@@ -1,17 +1,17 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @font-face {
-    font-family: 'EBGaramond';
-    src: url('/fonts/EB_Garamond/EBGaramond-VariableFont_wght.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: "EBGaramond";
+	src: url("/fonts/EB_Garamond/EBGaramond-VariableFont_wght.woff2")
+		format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
-    font-family: 'FiraMono';
-    src: url('/fonts/Fira_Mono/FiraMono-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: "FiraMono";
+	src: url("/fonts/Fira_Mono/FiraMono-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
-

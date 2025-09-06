@@ -1,21 +1,20 @@
 ---
 interface Propiedad {
-  slug: string;
-  data: {
-    titulo: string;
-    ubicacion: string;
-    dormitorios: number;
-    baños: number;
-    superficie_construida: number;
-    portada:string;
-    estado:string;
-  };
+	slug: string;
+	data: {
+		titulo: string;
+		ubicacion: string;
+		dormitorios: number;
+		baños: number;
+		superficie_construida: number;
+		portada: string;
+		estado: string;
+	};
 }
 interface Props {
-  listaPropiedades: Propiedad[];
+	listaPropiedades: Propiedad[];
 }
-const {listaPropiedades}= Astro.props
-
+const { listaPropiedades } = Astro.props;
 ---
 <section aria-label="Propiedades publicadas por AnHouse">
   <div class="w-full h-full grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">

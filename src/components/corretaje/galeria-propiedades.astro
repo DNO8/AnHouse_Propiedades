@@ -1,36 +1,39 @@
 ---
-import { getEntry } from 'astro:content';
-import sharp from 'sharp';
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+import fs from "node:fs/promises";
+import path from "node:path";
+import sharp from "sharp";
 
-type PropiedadEntry = CollectionEntry<'propiedades'>;
+type PropiedadEntry = CollectionEntry<"propiedades">;
 type Imagen = {
-  src: string;
-  width: number;
-  height: number;
+	src: string;
+	width: number;
+	height: number;
 };
 
 const id = Astro.params.id as string;
 
-const entry = await getEntry<'propiedades',string>({ collection: 'propiedades', id });
+const entry = await getEntry<"propiedades", string>({
+	collection: "propiedades",
+	id,
+});
 if (!entry) throw new Error(`No se encontró la propiedad con id “${id}”`);
-const slug=entry.id;
+const slug = entry.id;
 
 // 3. Leer metadata de imágenes
-const galeria:Imagen[] = await Promise.all(
-  entry.data.galeria.map(async (imgPath: string) => {
-    const absPath = new URL(`../../../public${imgPath}`, import.meta.url);
-    const imgBuffer = await fs.readFile(absPath);
-    const metadata = await sharp(imgBuffer).metadata();
+const galeria: Imagen[] = await Promise.all(
+	entry.data.galeria.map(async (imgPath: string) => {
+		const absPath = new URL(`../../../public${imgPath}`, import.meta.url);
+		const imgBuffer = await fs.readFile(absPath);
+		const metadata = await sharp(imgBuffer).metadata();
 
-    return {
-      src: imgPath,
-      width: metadata.width || 800,
-      height: metadata.height || 600,
-    };
-  })
+		return {
+			src: imgPath,
+			width: metadata.width || 800,
+			height: metadata.height || 600,
+		};
+	}),
 );
 ---
 <!-- HTML de la galería -->

@@ -1,11 +1,10 @@
 ---
-import LayoutPages from "@layouts/Layout-Pages.astro"
-import NavGeneral from "@components/NavGeneral.astro"
-import CardServices from "@components/Servicios/card-services.astro"
-import { getCollection } from "astro:content"
+import { getCollection } from "astro:content";
+import NavGeneral from "@components/NavGeneral.astro";
+import CardServices from "@components/Servicios/card-services.astro";
+import LayoutPages from "@layouts/Layout-Pages.astro";
 
 const servicios = await getCollection("services");
-
 ---
 
 <LayoutPages>

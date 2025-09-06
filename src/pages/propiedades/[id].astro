@@ -1,21 +1,34 @@
 ---
-import type { GetStaticPaths } from "astro";
-import { getCollection,render } from "astro:content"
-import LayoutPages from "@layouts/Layout-Pages.astro";
-import NavGeneral from "@components/NavGeneral.astro";
+import { getCollection, render } from "astro:content";
 import GaleriaPropiedades from "@components/corretaje/galeria-propiedades.astro";
+import NavGeneral from "@components/NavGeneral.astro";
+import LayoutPages from "@layouts/Layout-Pages.astro";
+import type { GetStaticPaths } from "astro";
 export const getStaticPaths = (async () => {
-    const propiedades= await getCollection("propiedades");
+	const propiedades = await getCollection("propiedades");
 
-    return propiedades.map((propiedad)=>({
-        params:{id:propiedad.slug},
-        props:{propiedad}
-    }));
+	return propiedades.map((propiedad) => ({
+		params: { id: propiedad.slug },
+		props: { propiedad },
+	}));
 }) satisfies GetStaticPaths;
-const {propiedad}=Astro.props
-const {data,slug}=propiedad
-const {titulo,superficie_total,superficie_construida,baños,pisos,dormitorios,ubicacion,estacionamientos,precio_uf,galeria,estado,precio_clp}= data
-const {Content}= await render(propiedad)
+const { propiedad } = Astro.props;
+const { data, slug } = propiedad;
+const {
+	titulo,
+	superficie_total,
+	superficie_construida,
+	baños,
+	pisos,
+	dormitorios,
+	ubicacion,
+	estacionamientos,
+	precio_uf,
+	galeria,
+	estado,
+	precio_clp,
+} = data;
+const { Content } = await render(propiedad);
 ---
 
 <LayoutPages>

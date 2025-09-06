@@ -1,10 +1,10 @@
 ---
-import LayoutPages from "@layouts/Layout-Pages.astro"
-import NavGeneral from "@components/NavGeneral.astro"
-import GridPropiedades from "@components/corretaje/grid-propiedades.astro"
-import { getCollection } from "astro:content"
+import { getCollection } from "astro:content";
+import GridPropiedades from "@components/corretaje/grid-propiedades.astro";
+import NavGeneral from "@components/NavGeneral.astro";
+import LayoutPages from "@layouts/Layout-Pages.astro";
 
-const propiedades= await getCollection("propiedades");
+const propiedades = await getCollection("propiedades");
 ---
 
 <LayoutPages>

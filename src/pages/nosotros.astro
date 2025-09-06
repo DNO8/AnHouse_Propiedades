@@ -1,15 +1,15 @@
 ---
-import LayoutPages from "@layouts/Layout-Pages.astro"
-import NavGeneral from "@components/NavGeneral.astro"
-import About from "@components/Nosotros/about.astro"
-import Faq from "@components/Nosotros/faq.astro"
-import { getEntry,render } from "astro:content"
-const faq = await getEntry<'FAQ','preguntas'>("FAQ","preguntas");
-let Content ;
-if(faq)
-{
-    const renderedContent = await render(faq);
-    Content = renderedContent.Content;
+import { getEntry, render } from "astro:content";
+import NavGeneral from "@components/NavGeneral.astro";
+import About from "@components/Nosotros/about.astro";
+import Faq from "@components/Nosotros/faq.astro";
+import LayoutPages from "@layouts/Layout-Pages.astro";
+
+const faq = await getEntry<"FAQ", "preguntas">("FAQ", "preguntas");
+let Content;
+if (faq) {
+	const renderedContent = await render(faq);
+	Content = renderedContent.Content;
 }
 ---
 <LayoutPages>
